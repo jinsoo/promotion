@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오수화 | Creative Director</title>
+    <title>와이 커뮤니케이션 (Y Communication) | 오수화</title>
     <!-- Tailwind CSS (via CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts (Noto Sans KR) -->
@@ -35,16 +35,16 @@
     <!-- Navigation (Sticky & Mobile Optimized) -->
     <nav class="fixed w-full z-50 top-0 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300" id="navbar">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-            <!-- Logo -->
             <a href="#" class="text-xl font-bold tracking-tight text-slate-900">
-                Oh<span class="text-indigo-600">SUHWA</span>.
+                Y <span class="text-indigo-600">Communication</span>
             </a>
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
                 <a href="#about" class="hover:text-indigo-600 transition-colors">소개</a>
-                <a href="#expertise" class="hover:text-indigo-600 transition-colors">전문분야</a>
-                <a href="#portfolio" class="hover:text-indigo-600 transition-colors">포트폴리오</a>
+                <a href="#ceo" class="hover:text-indigo-600 transition-colors">CEO</a>
+                <a href="#services" class="hover:text-indigo-600 transition-colors">핵심서비스</a>
+                <a href="#partners" class="hover:text-indigo-600 transition-colors">파트너사</a>
                 <a href="#contact" class="hover:text-indigo-600 transition-colors">문의하기</a>
             </div>
 
@@ -60,13 +60,13 @@
                 <i data-lucide="x" class="w-7 h-7"></i>
             </button>
             <div class="flex flex-col space-y-6 text-xl font-bold text-slate-800">
-                <a href="#about" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">소개 (About)</a>
-                <a href="#expertise" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">전문분야 (Expertise)</a>
-                <a href="#portfolio" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">포트폴리오 (Work)</a>
+                <a href="#about" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">회사 소개 (About)</a>
+                <a href="#ceo" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">CEO 인사말</a>
+                <a href="#services" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">핵심 서비스 (Services)</a>
+                <a href="#partners" onclick="toggleMenu()" class="border-b border-slate-100 pb-2">파트너십 (Partners)</a>
                 <a href="#contact" onclick="toggleMenu()" class="text-indigo-600">문의하기 (Contact)</a>
             </div>
-            <div class="mt-auto mb-10 text-sm text-slate-400">
-                &copy; 2025 Oh SuHwa Portfolio.
+                &copy; 2025 Y Communication.
             </div>
         </div>
     </nav>
@@ -75,61 +75,165 @@
     <section class="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-600 uppercase bg-indigo-50 rounded-full">
-                Personal Portfolio
+                Professional Communication Solution
             </div>
             <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6">
-                브랜드의 가치를 높이는<br>
-                <span class="gradient-text">크리에이티브 디렉터 오수화</span>
+                조직의 DNA를 분석하고,<br>
+                <span class="gradient-text">비즈니스의 격을 설계합니다.</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-                복잡한 이야기를 직관적인 디자인으로 풀어냅니다.<br class="hidden md:block">
-                당신의 비즈니스에 확실한 임팩트를 더해드립니다.
+                대한민국 최고의 스피치·미디어 컨설팅,<br class="hidden md:block">
+                전문 연사 섭외 및 교육 기획 전문 기업 **와이 커뮤니케이션**
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
                     <i data-lucide="mail" class="w-5 h-5"></i>
                     프로젝트 문의하기
                 </a>
-                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 font-bold border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
-                    포트폴리오 보기
+                    핵심 서비스 보기
                     <i data-lucide="arrow-down" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Profile & About Section -->
-    <section id="about" class="py-20 bg-white">
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-                <!-- Profile Image -->
-                <div class="w-48 md:w-64 aspect-[2/3] shrink-0 relative">
-                    <div class="absolute inset-0 bg-indigo-600 rounded-2xl rotate-3 opacity-20"></div>
-                    <img src="images/ohsh1.jpg" 
-                         alt="오수화 프로필 사진" 
-                         class="w-full h-full object-cover rounded-2xl shadow-xl rotate-0 relative z-10"
-                         onerror="this.src='https://placehold.co/400x400/indigo/white?text=Profile'">
-                </div>
-                
-                <div class="text-center md:text-left">
-                    <h2 class="text-2xl font-bold mb-4">안녕하세요, 오수화입니다.</h2>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        5년 차 프리랜서 디자이너이자 마케터로 활동하고 있습니다.
-                        단순히 예쁜 디자인이 아닌, **'팔리는 디자인'**과 **'기억에 남는 브랜딩'**을 목표로 합니다.
-                        온라인 환경, 특히 모바일 환경에서의 사용자 경험(UX)을 최우선으로 고려하여 작업합니다.
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold tracking-wider text-sm">ABOUT US</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">대한민국 최고의 스피치·미디어 컨설팅 파트너</h2>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Company Intro Text -->
+                <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed">
+                    <p class="mb-6 text-lg font-medium text-slate-800">
+                        와이 커뮤니케이션(Y Communication)은 고객사의 브랜드 가치와 대중의 니즈를 정교하게 분석한 **맞춤형 큐레이션**으로, 품격 있는 아나운서·MC 섭외 및 전략적 교육 컨설팅 서비스를 제공하는 국내 정상급 커뮤니케이션 솔루션 기업입니다.
                     </p>
-                    <div class="grid grid-cols-3 gap-4 border-t border-slate-100 pt-6">
-                        <div>
-                            <span class="block text-2xl font-bold text-indigo-600">5+</span>
-                            <span class="text-xs text-slate-400 font-medium">Years Exp.</span>
+                    <p class="mb-6">
+                        단순히 목소리를 전달하는 것을 넘어, **'언어의 힘'이 가진 변화의 기적**을 믿습니다. 세상을 움직이는 리더의 스피치, 고객의 마음을 여는 세일즈 화법, 그리고 조직의 DNA를 바꾸는 전문 교육은 정보의 공유를 넘어 우리 사회에 긍정적인 영향력과 조직의 성장이라는 가치를 만들어내기 때문입니다.
+                    </p>
+                    <p class="mb-6">
+                        우리는 이러한 언어의 힘을 믿기에, 지방의회의 의정 스피치부터 기업의 세일즈 강사 양성, 그리고 디지털 시대를 선도하는 SNS 브랜딩까지 범위와 한계를 뛰어넘는 **프리미엄 콘텐츠 발굴 및 전파**에 힘쓰고 있습니다.
+                    </p>
+                    <p>
+                        검증된 방송 실전 데이터와 탄탄한 레퍼런스를 보유한 와이 커뮤니케이션은 앞으로도 뜨거운 열정을 다해 ‘비즈니스의 격을 높이는 커뮤니케이션 콘텐츠 창출 기업’으로서 고객사 여러분께 깊은 신뢰와 압도적인 만족감을 선사하겠습니다.
+                    </p>
+                </div>
+
+                <!-- Core Values / Brand Identity -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
                         </div>
-                        <div>
-                            <span class="block text-2xl font-bold text-indigo-600">80+</span>
-                            <span class="text-xs text-slate-400 font-medium">Projects</span>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">진단 기반 교육</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            단순 강의 매칭이 아닌 조직 문제 분석을 통한 맞춤형 커리큘럼 설계
+                        </p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+                            <i data-lucide="award" class="w-6 h-6"></i>
                         </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">검증된 전문가</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            아나운서 및 쇼호스트 실무 경력을 보유한 최정상급 전문 인력
+                        </p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+                            <i data-lucide="settings" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">원스톱 매니지먼트</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            기획부터 연사 섭외, 현장 컨트롤까지 밀착 관리 시스템
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEO Section -->
+    <section id="ceo" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold tracking-wider text-sm">CEO MESSAGE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">인사말</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <!-- CEO Image & Key Info -->
+                <div class="w-full md:w-1/3 shrink-0">
+                    <div class="sticky top-24">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <img src="images/ohsh1.jpg" 
+                                 alt="와이 커뮤니케이션 대표 오수화" 
+                                 class="relative w-full aspect-[3/4] object-cover rounded-2xl shadow-2xl"
+                                 onerror="this.src='https://placehold.co/600x800/indigo/white?text=CEO+OSUHWA'">
+                        </div>
+                        <div class="mt-6 text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-slate-900">오수화</h3>
+                            <p class="text-indigo-600 font-medium italic mb-4">"언어의 품격으로 브랜드의 가치를 완성하는 스피커"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CEO Message & Profile Details -->
+                <div class="w-full md:w-2/3">
+                    <!-- Message -->
+                    <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 mb-10">
+                        <i data-lucide="quote" class="w-10 h-10 text-indigo-100 mb-6 font-black"></i>
+                        <h4 class="text-xl md:text-2xl font-bold leading-snug mb-8 text-slate-800">
+                            "차가운 마이크에 진심의 온기를,<br> 브랜드의 언어에 전략적 가치를 더합니다."
+                        </h4>
+                        <div class="prose prose-slate text-slate-600 leading-relaxed text-sm md:text-base space-y-4">
+                            <p>안녕하십니까, 와이 커뮤니케이션 대표 오수화입니다.</p>
+                            <p>저희는 단순한 메시지 전달을 넘어, 현장의 공기를 바꾸고 브랜드의 가치를 완성하는 전문 파트너 그룹입니다.</p>
+                            <p>아나운서의 날카로운 분석력, 쇼호스트의 생생한 소통 능력, 그리고 특임교수의 전문성을 바탕으로 각 분야의 정점에서 최상의 솔루션을 제안합니다.</p>
+                            <p class="font-bold text-slate-900 mt-8">와이 커뮤니케이션 대표 오수화</p>
+                        </div>
+                    </div>
+
+                    <!-- Profile List -->
+                    <div class="space-y-8">
                         <div>
-                            <span class="block text-2xl font-bold text-indigo-600">98%</span>
-                            <span class="text-xs text-slate-400 font-medium">Satisfaction</span>
+                            <h5 class="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i> 학력 및 주요 자격
+                            </h5>
+                            <ul class="space-y-2 text-slate-600 text-sm">
+                                <li>• 숙명여자대학교 TESOL 대학원 석사 과정</li>
+                                <li>• 숙명여자대학교 영어영문학 학사</li>
+                                <li>• 국가공인 CS리더스관리사 및 국제영어교사자격증 보유</li>
+                                <li>• 방송커뮤니케이션강사 1급, 이미지메이킹강사 1급 등</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h5 class="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                                <i data-lucide="briefcase" class="w-5 h-5"></i> 주요 경력
+                            </h5>
+                            <ul class="space-y-2 text-slate-600 text-sm">
+                                <li>• <span class="font-bold text-slate-800">현(現):</span> 와이 커뮤니케이션 대표</li>
+                                <li>• <span class="font-bold text-slate-800">현(現):</span> 한국산업기술원 지방자치연구소 특임교수</li>
+                                <li>• <span class="font-bold text-slate-800">전(前):</span> 한국경제TV 아나운서</li>
+                                <li>• 쇼호스트 (W쇼핑, 홈앤쇼핑, CJ온스타일 등 1,000회 이상 진행)</li>
+                                <li>• US ARMY 근무 경력 및 다수의 영어 MC 진행</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 class="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                                <i data-lucide="trophy" class="w-5 h-5"></i> 주요 수상이력
+                            </h5>
+                            <ul class="space-y-2 text-slate-600 text-sm">
+                                <li>• 2022년 한국방송진행자협회 쇼호스트상 수상</li>
+                                <li>• 2022년 미스 인터네셔널 “진(眞)” 수상 (슈퍼퀸 미인대회 대상)</li>
+                                <li>• 2022년 국방부 봉사대상 및 한미친선 증진 감사장</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -137,102 +241,133 @@
         </div>
     </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="py-20 px-6 bg-slate-50">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-indigo-600 font-bold tracking-wider text-sm">WHAT I DO</span>
-                <h2 class="text-3xl font-bold mt-2">제가 제공하는 서비스</h2>
+    <!-- Core Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold tracking-wider text-sm">CORE SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">핵심 서비스 분야</h2>
+                <p class="text-slate-500 mt-4">검증된 데이터와 실전 노하우를 바탕으로 최상의 솔루션을 제안합니다.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="palette" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">브랜드 아이덴티티</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        로고 디자인부터 컬러 시스템, 타이포그래피까지 브랜드의 핵심 가치를 시각적으로 정립합니다.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="smartphone" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">UI/UX 디자인</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        사용자 중심의 직관적인 웹사이트와 모바일 앱 인터페이스를 디자인합니다.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="megaphone" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">소셜 마케팅</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        인스타그램, 블로그 등 SNS 채널에 최적화된 카드뉴스와 홍보 이미지를 제작합니다.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 px-6 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-indigo-600 font-bold tracking-wider text-sm">PORTFOLIO</span>
-                <h2 class="text-3xl font-bold mt-2">최근 프로젝트</h2>
-            </div>
-
-            <!-- Filter (Optional visual element) -->
-            <div class="flex justify-center gap-4 mb-10 overflow-x-auto no-scrollbar pb-2">
-                <button class="px-4 py-2 bg-slate-900 text-white rounded-full text-sm font-medium whitespace-nowrap">전체</button>
-                <button class="px-4 py-2 bg-slate-100 text-slate-600 rounded-full text-sm font-medium hover:bg-slate-200 whitespace-nowrap">브랜딩</button>
-                <button class="px-4 py-2 bg-slate-100 text-slate-600 rounded-full text-sm font-medium hover:bg-slate-200 whitespace-nowrap">웹디자인</button>
-                <button class="px-4 py-2 bg-slate-100 text-slate-600 rounded-full text-sm font-medium hover:bg-slate-200 whitespace-nowrap">마케팅</button>
-            </div>
-
-            <!-- Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Item 1 -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Project 1" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-indigo-300 text-xs font-bold uppercase mb-1">Branding</span>
-                        <h3 class="text-white text-xl font-bold">A 카페 리브랜딩</h3>
+                <!-- Service 1 -->
+                <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i data-lucide="trending-up" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">① 세일즈 강사 양성과정</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        쇼호스트의 실전 화법을 이식하여 현장을 장악하는 전문가를 양성합니다. 제품 특징점 분석부터 1:1 피드백까지 밀착 교육합니다.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 제품 USP 분석 및 소구점 도출</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 1,000회 이상 생방송 실무 데이터 기반</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i data-lucide="mic-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">② 의원 및 공위 공직자 스피치 특강</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        신뢰감을 주는 목소리와 정교한 논리로 의정 활동의 격을 높입니다. 지방의회 의원 대상 스피치 및 이미지 브랜딩에 특화되어 있습니다.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 정책 전달력 및 이미지 컨설팅</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 부산, 수원, 강남구 등 주요 의회 교육 레퍼런스</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i data-lucide="share-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">③ SNS 활용 및 디지털 브랜딩</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        인플루언서, 아나운서, 유튜버의 노하우를 담은 퍼스널 브랜딩 전략을 제안합니다. 타겟 심리를 움직이는 콘텐츠 소통법을 공유합니다.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 팔로워 데이터 기반 소통법</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 디지털 시대의 새로운 영향력 구축</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
+                    <div class="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">④ 전문 연사 매칭 및 행사 진행</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        국제회의, 런칭쇼, 시상식 등의 품격을 높이는 아나운서 및 MC를 섭외합니다. 기획부터 현장 컨트롤까지 완벽한 매니지먼트를 보장합니다.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 국방부, 서울시, 대기업 진행 레퍼런스</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 최적의 연사 큐레이션 및 완벽한 운영</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-24 bg-slate-50 overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-indigo-600 font-bold tracking-wider text-sm">CLIENT LIST</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">협업 파트너사</h2>
+                <p class="text-slate-500 mt-4">신뢰와 실력으로 함께하는 동반자들입니다.</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Public / Government -->
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                        공공 / 지방자치
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm">지방자치인재개발원</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm">서울특별시청</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm">경기도청</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm">강원도특별자치도교육청</span>
                     </div>
                 </div>
 
-                <!-- Item 2 -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1555421689-492a18d933e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Project 2" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-indigo-300 text-xs font-bold uppercase mb-1">Web Design</span>
-                        <h3 class="text-white text-xl font-bold">스타트업 B 랜딩페이지</h3>
+                <!-- Corporate -->
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                        기업 / 브랜드
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">SAMSUNG</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">LG전자</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm">현대백화점</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm">교보생명</span>
+                        <div class="px-4 py-2 bg-white border border-slate-100 rounded-xl shadow-sm flex items-center justify-center">
+                            <img src="images/partners/atomy.svg" alt="애터미" class="h-6">
+                        </div>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">Market Kurly</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">Coway</span>
                     </div>
                 </div>
 
-                <!-- Item 3 -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Project 3" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-indigo-300 text-xs font-bold uppercase mb-1">Marketing</span>
-                        <h3 class="text-white text-xl font-bold">SNS 홍보 카드뉴스</h3>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Project 4" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                        <span class="text-indigo-300 text-xs font-bold uppercase mb-1">UI/UX</span>
-                        <h3 class="text-white text-xl font-bold">금융 앱 모바일 디자인</h3>
+                <!-- Global / IT -->
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                        글로벌 / IT
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">Microsoft Research Asia</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">HP</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">Symantec</span>
+                        <span class="px-4 py-2 bg-white border border-slate-100 rounded-xl text-slate-600 text-sm shadow-sm font-medium">FireEye</span>
                     </div>
                 </div>
             </div>
