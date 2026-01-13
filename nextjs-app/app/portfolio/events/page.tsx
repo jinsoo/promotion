@@ -16,5 +16,5 @@ export default async function EventsPage() {
     return <EventsClient events={[]} />;
   }
 
-  return <EventsClient events={events} />;
+
 }
