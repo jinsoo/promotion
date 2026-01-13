@@ -44,6 +44,8 @@
                 <a href="#about" class="hover:text-indigo-600 transition-colors">소개</a>
                 <a href="#ceo" class="hover:text-indigo-600 transition-colors">CEO</a>
                 <a href="#services" class="hover:text-indigo-600 transition-colors">핵심서비스</a>
+                <a href="#portfolio" class="hover:text-indigo-600 transition-colors">포트폴리오</a>
+                <a href="#announcer" class="hover:text-indigo-600 transition-colors">아나운서</a>
                 <a href="#partners" class="hover:text-indigo-600 transition-colors">파트너사</a>
                 <a href="#contact" class="hover:text-indigo-600 transition-colors">문의하기</a>
             </div>
@@ -75,6 +77,14 @@
             </a>
             <a href="#services" onclick="toggleMenu()" class="group flex items-center justify-between">
                 <span>Services</span>
+                <i data-lucide="chevron-right" class="w-6 h-6 text-indigo-200 group-hover:text-indigo-600 transition-colors"></i>
+            </a>
+            <a href="#portfolio" onclick="toggleMenu()" class="group flex items-center justify-between">
+                <span>Portfolio</span>
+                <i data-lucide="chevron-right" class="w-6 h-6 text-indigo-200 group-hover:text-indigo-600 transition-colors"></i>
+            </a>
+            <a href="#announcer" onclick="toggleMenu()" class="group flex items-center justify-between">
+                <span>Announcer</span>
                 <i data-lucide="chevron-right" class="w-6 h-6 text-indigo-200 group-hover:text-indigo-600 transition-colors"></i>
             </a>
             <a href="#partners" onclick="toggleMenu()" class="group flex items-center justify-between">
@@ -341,6 +351,51 @@
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-500"></i> 최적의 연사 큐레이션 및 완벽한 운영</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="relative py-32 bg-slate-900 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/portfolio_bg.jpg" alt="Portfolio Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">온마이크의 현장을 확인하세요</h2>
+            <p class="text-lg text-slate-200 mb-12 max-w-2xl mx-auto leading-relaxed">
+                포트폴리오에서 공식행사MC, 쇼호스트, 입찰PT, 기업교육 등<br class="hidden md:block">
+                다양한 현장을 확인할 수 있습니다.
+            </p>
+            <a href="#" class="inline-block px-12 py-4 border border-white text-white text-lg font-medium hover:bg-white hover:text-slate-900 transition-all duration-300">
+                포트폴리오 보기
+            </a>
+        </div>
+    </section>
+
+    <!-- Announcer Section -->
+    <section id="announcer" class="relative py-32 bg-slate-900 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="images/announcer_bg.jpg" alt="Announcer Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-white text-left">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-900/50 rounded-full border border-indigo-500/30">
+                Professional Network
+            </div>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
+                최고의 방송 전문가들과<br>
+                함께합니다
+            </h2>
+            <p class="text-lg text-slate-200 mb-10 max-w-xl leading-relaxed">
+                와이 커뮤니케이션은 검증된 아나운서, 쇼호스트, MC 등<br class="hidden md:block">
+                국내 정상급 방송 전문가들과 파트너십을 맺고 있습니다.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-600/25">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    아나운서 프로필 보기
+                </a>
             </div>
         </div>
     </section>
