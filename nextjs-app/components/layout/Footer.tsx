@@ -1,7 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import { ContactModal } from '@/components/contact/ContactModal';
 
 export function Footer() {
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+
   return (
     <footer id="contact" className="bg-slate-900 text-white py-20 px-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -14,18 +20,28 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
           {/* Phone Card */}
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors">
-            <div className="w-8 h-8 text-indigo-400 mx-auto mb-4">📞</div>
+          <a
+            href="tel:01031296842"
+            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors block group"
+          >
+            <div className="w-8 h-8 text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+              📞
+            </div>
             <h3 className="text-lg font-bold mb-1">Phone</h3>
             <p className="text-slate-300 mb-2">010-3129-6842</p>
-          </div>
+          </a>
 
-          {/* Email Card */}
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors">
-            <div className="w-8 h-8 text-indigo-400 mx-auto mb-4">📧</div>
-            <h3 className="text-lg font-bold mb-1">Email</h3>
-            <p className="text-slate-300 mb-2">sue_ycom@naver.com</p>
-          </div>
+          {/* Email Card (Triggers Modal) */}
+          <button
+            onClick={() => setIsContactModalOpen(true)}
+            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors w-full group"
+          >
+            <div className="w-8 h-8 text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+              📧
+            </div>
+            <h3 className="text-lg font-bold mb-1">Email / Inquiry</h3>
+            <p className="text-slate-300 mb-2">프로젝트 문의하기</p>
+          </button>
         </div>
 
         <div className="flex justify-center gap-6 mb-10">
@@ -55,6 +71,12 @@ export function Footer() {
           Designed for high impact.
         </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </footer>
   );
 }
