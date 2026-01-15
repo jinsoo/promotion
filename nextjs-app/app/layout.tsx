@@ -5,10 +5,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 const pretendard = localFont({
-  src: "../public/fonts/PretendardVariable.woff2",
+  src: "./fonts/PretendardVariable.woff2",
   display: "swap",
-  variable: "--font-pretendard",
   weight: "45 920",
+  variable: "--font-pretendard",
 });
 
 export const metadata: Metadata = {
