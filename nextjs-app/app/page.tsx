@@ -63,7 +63,7 @@ export default function Home() {
 
           <div className="space-y-12">
             <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed">
-              <p className="mb-8 text-xl font-light text-slate-800 leading-snug">
+              <p className="mb-8 text-lg font-medium text-slate-800 leading-snug">
                 와이 커뮤니케이션(Y Communication)은 고객사의 브랜드 가치와 대중의
                 니즈를 정교하게 분석한{' '}
                 <span className="font-bold text-indigo-600 px-1 border-b-2 border-indigo-100">

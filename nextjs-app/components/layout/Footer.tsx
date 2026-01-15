@@ -17,14 +17,14 @@ export function Footer() {
           <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors">
             <div className="w-8 h-8 text-indigo-400 mx-auto mb-4">📞</div>
             <h3 className="text-lg font-bold mb-1">Phone</h3>
-            <p className="text-slate-300 mb-2">010-1234-5678</p>
+            <p className="text-slate-300 mb-2">010-3129-6842</p>
           </div>
 
           {/* Email Card */}
           <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors">
             <div className="w-8 h-8 text-indigo-400 mx-auto mb-4">📧</div>
             <h3 className="text-lg font-bold mb-1">Email</h3>
-            <p className="text-slate-300 mb-2">contact@ycommunication.co.kr</p>
+            <p className="text-slate-300 mb-2">sue_ycom@naver.com</p>
           </div>
         </div>
 
