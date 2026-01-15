@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, ArrowDown, Activity, Award, Settings, TrendingUp, Mic2, Share2, Users, GraduationCap, Briefcase, Trophy, Quote } from 'lucide-react';
+import { Mail, ArrowDown, Activity, Award, Settings, TrendingUp, Mic2, Share2, Users, GraduationCap, Briefcase, Trophy, Quote, Phone } from 'lucide-react';
 import { ContactModal } from '@/components/contact/ContactModal';
 
 export default function Home() {
@@ -38,6 +38,13 @@ export default function Home() {
               <Mail className="w-5 h-5" />
               프로젝트 문의하기
             </button>
+            <a
+              href="tel:01031296842"
+              className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl hover:bg-slate-50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
+            >
+              <Phone className="w-5 h-5 text-indigo-600" />
+              010-3129-6842
+            </a>
             <Link
               href="#services"
               className="w-full sm:w-auto px-8 py-4 bg-slate-100 text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition-colors flex items-center justify-center gap-2"
@@ -76,18 +83,6 @@ export default function Home() {
                 </span>
                 입니다.
               </p>
-              <div className="mb-8">
-                <p>
-                  단순히 목소리를 전달하는 것을 넘어,{' '}
-                  <strong className="text-indigo-900">
-                    &apos;언어의 힘&apos;이 가진 변화의 기적
-                  </strong>
-                  을 믿습니다. 세상을 움직이는 리더의 스피치, 고객의 마음을 여는
-                  세일즈 화법, 그리고 조직의 DNA를 바꾸는 전문 교육은 정보의 공유를
-                  넘어 우리 사회에 긍정적인 영향력과 조직의 성장이라는 가치를
-                  만들어내기 때문입니다.
-                </p>
-              </div>
               <div className="p-8 bg-indigo-50/50 rounded-2xl border border-indigo-100/50 text-indigo-900/80 italic">
                 검증된 방송 실전 데이터와 탄탄한 레퍼런스를 보유한 와이
                 커뮤니케이션은 앞으로도 뜨거운 열정을 다해{' '}
@@ -292,13 +287,37 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Service 2 */}
+            {/* Service 2 (New - AI Education) */}
+            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
+              <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                <Activity className="w-7 h-7" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-slate-900">
+                ② AI 교육
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                조직의 DNA를 분석하여 실무에 즉시 투입 가능한 &apos;생성형 AI 워크플로우&apos;를 디자인합니다.
+              </p>
+              <ul className="space-y-2 text-xs text-slate-500 font-medium">
+                <li className="flex items-center gap-2">
+                  ✓ 데이터 기반 AI 세일즈 큐레이션 & 설득 전략
+                </li>
+                <li className="flex items-center gap-2">
+                  ✓ AI SNS 퍼스널 브랜딩: 알고리즘을 장악하는 콘텐츠 설계
+                </li>
+                <li className="flex items-center gap-2">
+                  ✓ 유튜브 & 폼 마케팅의 미래, AI 비디오 퍼포먼스 가이드
+                </li>
+              </ul>
+            </div>
+
+            {/* Service 3 (Renumbered) */}
             <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
               <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <Mic2 className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
-                ② 의원 및 공위 공직자 스피치 특강
+                ③ 의원 및 공위 공직자 스피치 특강
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
                 신뢰감을 주는 목소리와 정교한 논리로 의정 활동의 격을 높입니다.
@@ -314,13 +333,13 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Service 3 */}
+            {/* Service 4 (Renumbered) */}
             <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
               <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <Share2 className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
-                ③ SNS 활용 및 디지털 브랜딩
+                ④ SNS 활용 및 디지털 브랜딩
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
                 인플루언서, 아나운서, 유튜버의 노하우를 담은 퍼스널 브랜딩 전략을
@@ -336,13 +355,13 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Service 4 */}
+            {/* Service 5 (Renumbered) */}
             <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
               <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <Users className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
-                ④ 전문 연사 매칭 및 행사 진행
+                ⑤ 전문 연사 매칭 및 행사 진행
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
                 국제회의, 런칭쇼, 시상식 등의 품격을 높이는 아나운서 및 MC를
@@ -374,7 +393,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
-            온마이크의 현장을 확인하세요
+            온마이크-와이커뮤니케이션의 현장을 확인하세요
           </h2>
           <p className="text-lg text-slate-200 mb-12 max-w-2xl mx-auto leading-relaxed">
             포트폴리오에서 공식행사MC, 쇼호스트, 입찰PT, 기업교육 등

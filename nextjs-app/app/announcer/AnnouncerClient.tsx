@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { urlFor } from '@/lib/sanity/image';
@@ -14,23 +14,7 @@ interface Announcer {
   photo: any;
 }
 
-// Filter categories
-const filters = [
-  { value: 'all', label: '모두' },
-  { value: 'announcer', label: '아나운서' },
-  { value: 'mc', label: 'MC' },
-  { value: 'instructor', label: '강사' },
-  { value: 'foreigner', label: '외국인' },
-];
-
 export default function AnnouncerClient({ announcers }: { announcers: Announcer[] }) {
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  const filteredAnnouncers =
-    activeFilter === 'all'
-      ? announcers
-      : announcers.filter((a) => a.category && a.category.includes(activeFilter));
-
   const getCategoryLabel = (categories: string[]) => {
     if (!categories) return '';
     const labels: Record<string, string> = {
@@ -56,26 +40,9 @@ export default function AnnouncerClient({ announcers }: { announcers: Announcer[
           </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter.value}
-              onClick={() => setActiveFilter(filter.value)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
-                activeFilter === filter.value
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/30'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
-
         {/* Profile Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredAnnouncers.map((announcer) => (
+          {announcers.map((announcer) => (
             <Link
               key={announcer._id}
               href={`/announcer/${announcer._id}`}
@@ -123,9 +90,9 @@ export default function AnnouncerClient({ announcers }: { announcers: Announcer[
         </div>
 
         {/* Empty State */}
-        {filteredAnnouncers.length === 0 && (
+        {announcers.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-slate-500">해당 카테고리의 프로필이 없습니다.</p>
+            <p className="text-slate-500">등록된 프로필이 없습니다.</p>
           </div>
         )}
       </div>
