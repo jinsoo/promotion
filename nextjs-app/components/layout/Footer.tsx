@@ -21,14 +21,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
           {/* Phone Card */}
           <a
-            href="tel:01031296842"
+            href="tel:01076526842"
             className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors block group"
           >
             <div className="w-8 h-8 text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
               📞
             </div>
             <h3 className="text-lg font-bold mb-1">Phone</h3>
-            <p className="text-slate-300 mb-2">010-3129-6842</p>
+            <p className="text-slate-300 mb-2">010-7652-6842</p>
           </a>
 
           {/* Email Card (Triggers Modal) */}
@@ -39,7 +39,7 @@ export function Footer() {
             <div className="w-8 h-8 text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
               📧
             </div>
-            <h3 className="text-lg font-bold mb-1">Email / Inquiry</h3>
+            <h3 className="text-lg font-bold mb-1">Email(info@ycom.live) / Inquiry</h3>
             <p className="text-slate-300 mb-2">프로젝트 문의하기</p>
           </button>
         </div>
