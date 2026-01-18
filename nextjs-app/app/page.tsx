@@ -39,11 +39,11 @@ export default function Home() {
               프로젝트 문의하기
             </button>
             <a
-              href="tel:01031296842"
+              href="tel:01076526842"
               className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl hover:bg-slate-50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
             >
               <Phone className="w-5 h-5 text-indigo-600" />
-              010-3129-6842
+              010-7652-6842
             </a>
             <Link
               href="#services"
@@ -396,7 +396,7 @@ export default function Home() {
             Professional Performance
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
-            온마이크-와이커뮤니케이션의
+            Y 커뮤니케이션의
             <br />
             현장을 확인하세요
           </h2>
