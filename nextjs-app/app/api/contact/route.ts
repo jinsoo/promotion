@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     try {
       await resend.emails.send({
         from: 'Y Communication <onboarding@resend.dev>', // Update this with your verified domain if available
-        to: ['ohsuhwa@naver.com'], // Replace with actual recipient
+        to: ['info@ycom.live'], // Replace with actual recipient
         subject: `[프로젝트 문의] ${company} - ${manager}님`,
         html: `
         <h1>새로운 프로젝트 문의가 도착했습니다.</h1>
