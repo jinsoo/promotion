@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-600 uppercase bg-indigo-50 rounded-full">
+          <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-sky-600 uppercase bg-sky-50 rounded-full">
             Professional Communication Solution
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6">
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsContactModalOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-lg shadow-sky-500/20 hover:bg-slate-800 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Mail className="w-5 h-5" />
               프로젝트 문의하기
@@ -42,7 +42,7 @@ export default function Home() {
               href="tel:01076526842"
               className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl hover:bg-slate-50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
             >
-              <Phone className="w-5 h-5 text-indigo-600" />
+              <Phone className="w-5 h-5 text-sky-600" />
               010-7652-6842
             </a>
             <Link
@@ -60,7 +60,7 @@ export default function Home() {
       <section id="about" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-indigo-600 font-bold tracking-wider text-sm">
+            <span className="text-sky-600 font-bold tracking-wider text-sm">
               ABOUT US
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">
@@ -73,7 +73,7 @@ export default function Home() {
               <p className="mb-8 text-lg font-medium text-slate-800 leading-snug">
                 와이 커뮤니케이션(Y Communication)은 고객사의 브랜드 가치와 대중의
                 니즈를 정교하게 분석한{' '}
-                <span className="font-bold text-indigo-600 px-1 border-b-2 border-indigo-100">
+                <span className="font-bold text-sky-600 px-1 border-b-2 border-sky-100">
                   맞춤형 큐레이션
                 </span>
                 으로, 품격 있는 아나운서·MC 섭외 및 전략적 교육 컨설팅 서비스를
@@ -83,10 +83,10 @@ export default function Home() {
                 </span>
                 입니다.
               </p>
-              <div className="p-8 bg-indigo-50/50 rounded-2xl border border-indigo-100/50 text-indigo-900/80 italic">
+              <div className="p-8 bg-sky-50/50 rounded-2xl border border-sky-100/50 text-sky-900/80 italic">
                 검증된 방송 실전 데이터와 탄탄한 레퍼런스를 보유한 와이
                 커뮤니케이션은 앞으로도 뜨거운 열정을 다해{' '}
-                <span className="font-bold text-indigo-600">
+                <span className="font-bold text-sky-600">
                   &apos;비즈니스의 격을 높이는 커뮤니케이션 콘텐츠 창출 기업&apos;
                 </span>
                 으로서 고객사 여러분께 깊은 신뢰와 압도적인 만족감을 선사하겠습니다.
@@ -96,7 +96,7 @@ export default function Home() {
             {/* Core Values */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
               <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
-                <div className="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+                <div className="w-12 h-12 bg-sky-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-sky-200">
                   <Activity className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">
@@ -107,7 +107,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
-                <div className="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+                <div className="w-12 h-12 bg-sky-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-sky-200">
                   <Award className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">
@@ -118,7 +118,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
-                <div className="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-indigo-200">
+                <div className="w-12 h-12 bg-sky-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-sky-200">
                   <Settings className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-slate-900">
@@ -137,7 +137,7 @@ export default function Home() {
       <section id="ceo" className="py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-indigo-600 font-bold tracking-wider text-sm">
+            <span className="text-sky-600 font-bold tracking-wider text-sm">
               CEO MESSAGE
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">인사말</h2>
@@ -148,7 +148,7 @@ export default function Home() {
             <div className="w-full md:w-1/3 shrink-0">
               <div className="sticky top-24">
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                   <Image
                     src="/images/ohsh1.jpg"
                     alt="와이 커뮤니케이션 대표 오수화"
@@ -169,7 +169,7 @@ export default function Home() {
             {/* CEO Message */}
             <div className="w-full md:w-2/3">
               <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 mb-10">
-                <Quote className="w-10 h-10 text-indigo-100 mb-6" />
+                <Quote className="w-10 h-10 text-sky-100 mb-6" />
                 <h4 className="text-xl md:text-2xl font-bold leading-snug mb-8 text-slate-800">
                   &quot;차가운 마이크에 진심의 온기를,
                   <br /> 브랜드의 언어에 전략적 가치를 더합니다.&quot;
@@ -194,7 +194,7 @@ export default function Home() {
               {/* Profile Details */}
               <div className="space-y-8">
                 <div>
-                  <h5 className="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                  <h5 className="flex items-center gap-2 text-sky-600 font-bold mb-4">
                     <GraduationCap className="w-5 h-5" /> 학력 및 주요 자격
                   </h5>
                   <ul className="space-y-2 text-slate-600 text-sm">
@@ -206,7 +206,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h5 className="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                  <h5 className="flex items-center gap-2 text-sky-600 font-bold mb-4">
                     <Briefcase className="w-5 h-5" /> 주요 경력
                   </h5>
                   <ul className="space-y-2 text-slate-600 text-sm">
@@ -233,7 +233,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h5 className="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                  <h5 className="flex items-center gap-2 text-sky-600 font-bold mb-4">
                     <Trophy className="w-5 h-5" /> 주요 수상이력
                   </h5>
                   <ul className="space-y-2 text-slate-600 text-sm">
@@ -255,7 +255,7 @@ export default function Home() {
       <section id="services" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-indigo-600 font-bold tracking-wider text-sm">
+            <span className="text-sky-600 font-bold tracking-wider text-sm">
               CORE SERVICES
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">핵심 서비스 분야</h2>
@@ -266,8 +266,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Service 1 */}
-            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-              <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-sky-500 hover:bg-white hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-300">
+              <div className="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <TrendingUp className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -288,8 +288,8 @@ export default function Home() {
             </div>
 
             {/* Service 2 (New - AI Education) */}
-            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-              <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-sky-500 hover:bg-white hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-300">
+              <div className="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <Activity className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -312,8 +312,8 @@ export default function Home() {
             </div>
 
             {/* Service 3 (Renumbered) */}
-            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-              <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-sky-500 hover:bg-white hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-300">
+              <div className="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <Mic2 className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -334,8 +334,8 @@ export default function Home() {
             </div>
 
             {/* Service 4 (Renumbered) */}
-            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-              <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-sky-500 hover:bg-white hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-300">
+              <div className="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <Share2 className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -356,8 +356,8 @@ export default function Home() {
             </div>
 
             {/* Service 5 (Renumbered) */}
-            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-500 hover:bg-white hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
-              <div className="w-14 h-14 bg-white text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+            <div className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-sky-500 hover:bg-white hover:shadow-xl hover:shadow-sky-500/5 transition-all duration-300">
+              <div className="w-14 h-14 bg-white text-sky-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm border border-slate-100 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <Users className="w-7 h-7" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -392,7 +392,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-white text-left md:text-center">
-          <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-900/50 rounded-full border border-indigo-500/30">
+          <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-sky-400 uppercase bg-sky-900/50 rounded-full border border-sky-500/30">
             Professional Performance
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
@@ -408,7 +408,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 justify-start md:justify-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-600/25"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-sky-600 text-white font-bold rounded-xl hover:bg-sky-700 transition-all duration-300 shadow-lg shadow-sky-600/25"
             >
               <Briefcase className="w-5 h-5" />
               포트폴리오 보기
@@ -429,7 +429,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-white text-left md:text-center">
-          <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-900/50 rounded-full border border-indigo-500/30">
+          <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-sky-400 uppercase bg-sky-900/50 rounded-full border border-sky-500/30">
             Professional Network
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
@@ -445,7 +445,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 justify-start md:justify-center">
             <Link
               href="/announcer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-600/25"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-sky-600 text-white font-bold rounded-xl hover:bg-sky-700 transition-all duration-300 shadow-lg shadow-sky-600/25"
             >
               <Users className="w-5 h-5" />
               아나운서 프로필 보기
@@ -458,7 +458,7 @@ export default function Home() {
       <section id="partners" className="py-24 bg-slate-50 overflow-hidden">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-indigo-600 font-bold tracking-wider text-sm">
+            <span className="text-sky-600 font-bold tracking-wider text-sm">
               CLIENT LIST
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">협업 파트너사</h2>
@@ -471,7 +471,7 @@ export default function Home() {
             {/* Public / Government */}
             <div>
               <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span className="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                <span className="w-1.5 h-6 bg-sky-600 rounded-full"></span>
                 공공 / 지방자치
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -491,7 +491,7 @@ export default function Home() {
             {/* Corporate */}
             <div>
               <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span className="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                <span className="w-1.5 h-6 bg-sky-600 rounded-full"></span>
                 기업 / 브랜드
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -517,7 +517,7 @@ export default function Home() {
             {/* Global / IT */}
             <div>
               <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <span className="w-1.5 h-6 bg-indigo-600 rounded-full"></span>
+                <span className="w-1.5 h-6 bg-sky-600 rounded-full"></span>
                 글로벌 / IT
               </h3>
               <div className="flex flex-wrap gap-3">

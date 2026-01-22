@@ -22,9 +22,9 @@ export function Footer() {
           {/* Phone Card */}
           <a
             href="tel:01076526842"
-            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors block group"
+            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500 transition-colors block group"
           >
-            <div className="w-8 h-8 text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-8 h-8 text-sky-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
               📞
             </div>
             <h3 className="text-lg font-bold mb-1">Phone</h3>
@@ -34,9 +34,9 @@ export function Footer() {
           {/* Email Card (Triggers Modal) */}
           <button
             onClick={() => setIsContactModalOpen(true)}
-            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-indigo-500 transition-colors w-full group"
+            className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500 transition-colors w-full group"
           >
-            <div className="w-8 h-8 text-indigo-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-8 h-8 text-sky-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
               📧
             </div>
             <h3 className="text-lg font-bold mb-1">Email(info@ycom.live) / Inquiry</h3>
@@ -47,19 +47,19 @@ export function Footer() {
         <div className="flex justify-center gap-6 mb-10">
           <Link
             href="#"
-            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-600 transition-colors"
           >
             <Instagram className="w-5 h-5" />
           </Link>
           <Link
             href="#"
-            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-600 transition-colors"
           >
             <Facebook className="w-5 h-5" />
           </Link>
           <Link
             href="#"
-            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors"
+            className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-600 transition-colors"
           >
             <Linkedin className="w-5 h-5" />
           </Link>

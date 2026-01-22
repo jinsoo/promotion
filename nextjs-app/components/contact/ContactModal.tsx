@@ -117,7 +117,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 type="text"
                 name="company"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                 placeholder="회사/기관명을 입력하세요"
               />
             </div>
@@ -132,7 +132,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   type="text"
                   name="manager"
                   required
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                   placeholder="이름"
                 />
               </div>
@@ -144,7 +144,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   type="tel"
                   name="phone"
                   required
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                   placeholder="010-0000-0000"
                 />
               </div>
@@ -159,7 +159,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 type="email"
                 name="email"
                 required
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                 placeholder="example@company.com"
               />
             </div>
@@ -173,7 +173,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <input
                   type="text"
                   name="date"
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                   placeholder="예: 2026년 2월 15일"
                 />
               </div>
@@ -184,7 +184,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <input
                   type="text"
                   name="location"
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                   placeholder="행사 장소"
                 />
               </div>
@@ -199,7 +199,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <input
                   type="text"
                   name="budget"
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
                   placeholder="예산 범위"
                 />
               </div>
@@ -210,7 +210,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 <select
                   name="field"
                   required
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all bg-white"
+                  className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all bg-white"
                 >
                   <option value="">선택하세요</option>
                   {fieldOptions.map((option) => (
@@ -230,7 +230,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <textarea
                 name="note"
                 rows={4}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all resize-none"
                 placeholder="추가 요청사항이나 문의 내용을 입력하세요"
               />
             </div>
@@ -247,7 +247,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 px-4 py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="flex-1 px-4 py-3 bg-sky-600 text-white font-medium rounded-xl hover:bg-sky-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>

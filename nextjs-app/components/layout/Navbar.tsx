@@ -33,7 +33,7 @@ export function Navbar() {
       <nav className="fixed w-full z-40 top-0 bg-white/90 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold tracking-tight text-slate-900">
-            Y <span className="text-indigo-600">Communication</span>
+            Y <span className="text-sky-600">Communication</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -42,7 +42,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-indigo-600 transition-colors"
+                className="hover:text-sky-600 transition-colors"
               >
                 {link.label}
               </Link>
@@ -52,7 +52,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-slate-600 hover:text-indigo-600 focus:outline-none"
+            className="md:hidden p-2 text-slate-600 hover:text-sky-600 focus:outline-none"
           >
             <Menu className="w-6 h-6" />
           </button>
@@ -84,14 +84,14 @@ export function Navbar() {
               href={link.href}
               onClick={closeMenu}
               className={`group flex items-center justify-between ${
-                index === navLinks.length - 1 ? 'text-indigo-600' : ''
+                index === navLinks.length - 1 ? 'text-sky-600' : ''
               }`}
             >
               <span>{link.labelEn}</span>
               {index === navLinks.length - 1 ? (
                 <Mail className="w-6 h-6" />
               ) : (
-                <ChevronRight className="w-6 h-6 text-indigo-200 group-hover:text-indigo-600 transition-colors" />
+                <ChevronRight className="w-6 h-6 text-sky-200 group-hover:text-sky-600 transition-colors" />
               )}
             </Link>
           ))}
