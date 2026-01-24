@@ -123,6 +123,7 @@ export function Navbar() {
       <ContactModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
+        designType="business"
       />
     </>
   );
