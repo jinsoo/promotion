@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;900&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
+  
+  /* Modern Design Colors */
+  --color-gold: #c9a962;
+  --color-gold-dark: #b39550;
+  --color-primary-dark: #1a1a1a;
+  --color-charcoal: #2d3436;
+  --color-bg-warm: #faf9f7;
+
+  /* Business Design Colors */
+  --color-business-primary: #1a1a1a;
+  --color-business-secondary: #c9a962;
+  --color-business-secondary-dark: #b39550;
+  --color-business-accent: #2d3436;
+  --color-business-background: #faf9f7;
 }
 
 @theme inline {

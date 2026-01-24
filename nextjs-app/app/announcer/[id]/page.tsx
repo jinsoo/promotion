@@ -10,9 +10,53 @@ interface AnnouncerProfilePageProps {
   params: Promise<{ id: string }>;
 }
 
+// Check design type from environment variable
+const designType = process.env.NEXT_PUBLIC_DESIGN_TYPE || 'default';
+
+// Design-specific styles
+const designStyles = {
+  default: {
+    container: 'pt-24 pb-16 bg-white',
+    backLink: 'text-slate-500 hover:text-indigo-600',
+    photoGlow: 'bg-gradient-to-r from-indigo-600 to-purple-600',
+    tag: 'bg-indigo-100 text-indigo-700',
+    name: 'text-slate-900',
+    title: 'text-indigo-600',
+    affiliation: 'text-slate-500',
+    sectionTitle: 'text-indigo-600',
+    listText: 'text-slate-600',
+    portfolioTitle: 'text-slate-900',
+  },
+  modern: {
+    container: 'pt-24 pb-16 bg-slate-900',
+    backLink: 'text-white/60 hover:text-amber-500',
+    photoGlow: 'bg-gradient-to-r from-amber-500 to-amber-700',
+    tag: 'bg-amber-900/50 text-amber-400',
+    name: 'text-white',
+    title: 'text-amber-500',
+    affiliation: 'text-white/60',
+    sectionTitle: 'text-amber-500',
+    listText: 'text-white/70',
+    portfolioTitle: 'text-white',
+  },
+  business: {
+    container: 'pt-24 pb-16 bg-[#1a1a1a]',
+    backLink: 'text-white/60 hover:text-[#c9a962]',
+    photoGlow: 'bg-gradient-to-r from-[#c9a962] to-[#a08040]',
+    tag: 'bg-[#c9a962]/20 text-[#c9a962]',
+    name: 'text-white',
+    title: 'text-[#c9a962]',
+    affiliation: 'text-white/60',
+    sectionTitle: 'text-[#c9a962]',
+    listText: 'text-white/70',
+    portfolioTitle: 'text-white',
+  },
+};
+
 export default async function AnnouncerProfilePage({ params }: AnnouncerProfilePageProps) {
   const { id } = await params;
   const announcer = await client.fetch(announcerByIdQuery, { id });
+  const styles = designStyles[designType as keyof typeof designStyles] || designStyles.default;
 
   if (!announcer) {
     notFound();
@@ -29,13 +73,13 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className={styles.container}>
       <div className="max-w-4xl mx-auto px-6">
         {/* Breadcrumb */}
         <div className="mb-8">
           <Link
             href="/announcer"
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-indigo-600 transition-colors text-sm"
+            className={`inline-flex items-center gap-2 ${styles.backLink} transition-colors text-sm`}
           >
             <ChevronLeft className="w-4 h-4" />
             아나운서 목록
@@ -47,7 +91,7 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
           {/* Photo */}
           <div className="w-full md:w-1/3 shrink-0">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-25"></div>
+              <div className={`absolute -inset-1 ${styles.photoGlow} rounded-2xl blur opacity-25`}></div>
               <div className="relative w-full aspect-[3/4] rounded-2xl shadow-2xl overflow-hidden bg-slate-100">
                 {announcer.photo ? (
                   <Image
@@ -73,19 +117,19 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
                 {announcer.category && announcer.category.map((cat: string) => (
                   <span
                     key={cat}
-                    className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium"
+                    className={`px-3 py-1 ${styles.tag} rounded-full text-sm font-medium`}
                   >
                     {getCategoryLabel(cat)}
                   </span>
                 ))}
               </div>
-              <h1 className="text-4xl font-bold text-slate-900 mb-2">
+              <h1 className={`text-4xl font-bold ${styles.name} mb-2`}>
                 {announcer.name}
               </h1>
-              <p className="text-xl text-indigo-600 font-medium mb-1">
+              <p className={`text-xl ${styles.title} font-medium mb-1`}>
                 {announcer.title}
               </p>
-              <p className="text-slate-500">{announcer.affiliation}</p>
+              <p className={styles.affiliation}>{announcer.affiliation}</p>
             </div>
 
             {/* Details */}
@@ -93,10 +137,10 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
               {/* Education */}
               {announcer.education && announcer.education.length > 0 && (
                 <div>
-                  <h3 className="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                  <h3 className={`flex items-center gap-2 ${styles.sectionTitle} font-bold mb-4`}>
                     <GraduationCap className="w-5 h-5" /> 학력 및 자격
                   </h3>
-                  <ul className="space-y-2 text-slate-600 text-sm">
+                  <ul className={`space-y-2 ${styles.listText} text-sm`}>
                     {announcer.education.map((item: string, idx: number) => (
                       <li key={idx}>• {item}</li>
                     ))}
@@ -107,10 +151,10 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
               {/* Career */}
               {announcer.career && announcer.career.length > 0 && (
                 <div>
-                  <h3 className="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                  <h3 className={`flex items-center gap-2 ${styles.sectionTitle} font-bold mb-4`}>
                     <Briefcase className="w-5 h-5" /> 경력
                   </h3>
-                  <ul className="space-y-2 text-slate-600 text-sm">
+                  <ul className={`space-y-2 ${styles.listText} text-sm`}>
                     {announcer.career.map((item: string, idx: number) => (
                       <li key={idx}>• {item}</li>
                     ))}
@@ -121,10 +165,10 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
               {/* Awards */}
               {announcer.awards && announcer.awards.length > 0 && (
                 <div>
-                  <h3 className="flex items-center gap-2 text-indigo-600 font-bold mb-4">
+                  <h3 className={`flex items-center gap-2 ${styles.sectionTitle} font-bold mb-4`}>
                     <Trophy className="w-5 h-5" /> 수상
                   </h3>
-                  <ul className="space-y-2 text-slate-600 text-sm">
+                  <ul className={`space-y-2 ${styles.listText} text-sm`}>
                     {announcer.awards.map((item: string, idx: number) => (
                       <li key={idx}>• {item}</li>
                     ))}
@@ -138,7 +182,7 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
         {/* Portfolio Images */}
         {announcer.portfolioImages && announcer.portfolioImages.length > 0 && (
           <div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">포트폴리오</h2>
+            <h2 className={`text-2xl font-bold ${styles.portfolioTitle} mb-6`}>포트폴리오</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {announcer.portfolioImages.map((img: any, idx: number) => (
                 <div
