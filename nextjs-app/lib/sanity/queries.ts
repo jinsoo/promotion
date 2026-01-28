@@ -35,7 +35,8 @@ export const announcersQuery = groq`
     title,
     category,
     affiliation,
-    photo
+    photo,
+    priority
   }
 `;
 
@@ -63,6 +64,7 @@ export const announcersByCategoryQuery = groq`
     title,
     category,
     affiliation,
-    photo
+    photo,
+    priority
   }
 `;
