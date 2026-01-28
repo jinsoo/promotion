@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
@@ -8,10 +9,20 @@ import { urlFor } from '@/lib/sanity/image';
 interface Event {
   _id: string;
   title: string;
+  category?: string;
   images: any[];
 }
 
 const designType = process.env.NEXT_PUBLIC_DESIGN_TYPE || 'default';
+
+const categories = [
+  { value: 'all', label: '전체' },
+  { value: 'official-mc', label: '공식 행사 MC' },
+  { value: 'showhost-live', label: '쇼호스트 / 라이브' },
+  { value: 'video-ad', label: '영상 / 광고' },
+  { value: 'corporate-training', label: '기업 교육' },
+  { value: 'speech-consulting', label: '스피치 컨설팅' },
+];
 
 const designStyles = {
   default: {
@@ -22,6 +33,8 @@ const designStyles = {
     subtitle: 'text-slate-500',
     card: 'bg-white border-slate-200 hover:border-indigo-300 hover:shadow-lg',
     cardTitle: 'text-slate-800',
+    tab: 'text-slate-600 hover:text-indigo-600 hover:bg-indigo-50',
+    tabActive: 'bg-indigo-600 text-white',
   },
   modern: {
     container: 'pt-24 pb-16 bg-slate-900',
@@ -31,6 +44,8 @@ const designStyles = {
     subtitle: 'text-white/60',
     card: 'bg-slate-800 border-slate-700 hover:border-amber-500/50 hover:shadow-lg',
     cardTitle: 'text-white/90',
+    tab: 'text-white/60 hover:text-amber-500 hover:bg-white/5',
+    tabActive: 'bg-amber-500 text-slate-900',
   },
   business: {
     container: 'pt-24 pb-16 bg-[#1a1a1a]',
@@ -40,11 +55,18 @@ const designStyles = {
     subtitle: 'text-white/60',
     card: 'bg-[#222] border-[#c9a962]/20 hover:border-[#c9a962] hover:shadow-lg',
     cardTitle: 'text-white/80',
+    tab: 'text-white/60 hover:text-[#c9a962] hover:bg-white/5',
+    tabActive: 'bg-[#c9a962] text-[#1a1a1a]',
   },
 };
 
 export default function EventsClient({ events }: { events: Event[] }) {
   const styles = designStyles[designType as keyof typeof designStyles] || designStyles.default;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const filteredEvents = selectedCategory === 'all'
+    ? events
+    : events.filter(e => e.category === selectedCategory);
 
   return (
     <div className={styles.container}>
@@ -61,7 +83,7 @@ export default function EventsClient({ events }: { events: Event[] }) {
         </div>
 
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <span className={`${styles.label} font-bold tracking-wider text-sm`}>
             EVENTS
           </span>
@@ -71,9 +93,26 @@ export default function EventsClient({ events }: { events: Event[] }) {
           </p>
         </div>
 
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              onClick={() => setSelectedCategory(cat.value)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                selectedCategory === cat.value
+                  ? styles.tabActive
+                  : styles.tab
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
         {/* Events Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {events.map((event) => (
+          {filteredEvents.map((event) => (
             <div
               key={event._id}
               className={`border rounded-xl overflow-hidden transition-all duration-300 ${styles.card}`}
@@ -107,3 +146,4 @@ export default function EventsClient({ events }: { events: Event[] }) {
     </div>
   );
 }
+
