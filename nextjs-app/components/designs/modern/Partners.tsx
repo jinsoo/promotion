@@ -104,11 +104,34 @@ export function Partners() {
                       </div>
                     ))}
                   </div>
-                  {/* Duplicate set for seamless loop */}
+                  {/* Duplicate set 2 */}
                   <div className="flex gap-10 py-4 pr-10 flex-shrink-0" aria-hidden="true">
                     {group.partners.map((partner, i) => (
                       <div
                         key={`set2-${i}`}
+                        className="group/item relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
+                      >
+                        <div className="relative w-full h-full transition-all duration-300 grayscale brightness-[0.7] group-hover/item:grayscale-0 group-hover/item:brightness-100">
+                          <Image
+                            src={partner.logo}
+                            alt={partner.name}
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100px, 160px"
+                          />
+                        </div>
+                        {/* Name Tooltip */}
+                        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded-md opacity-0 group-hover/item:opacity-100 transition-all transform group-hover/item:-translate-y-1 whitespace-nowrap z-50 pointer-events-none shadow-2xl after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-top-gray-900">
+                          {partner.name}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Duplicate set 3 for guaranteed coverage on wide screens with few logos */}
+                  <div className="flex gap-10 py-4 pr-10 flex-shrink-0" aria-hidden="true">
+                    {group.partners.map((partner, i) => (
+                      <div
+                        key={`set3-${i}`}
                         className="group/item relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
                       >
                         <div className="relative w-full h-full transition-all duration-300 grayscale brightness-[0.7] group-hover/item:grayscale-0 group-hover/item:brightness-100">
