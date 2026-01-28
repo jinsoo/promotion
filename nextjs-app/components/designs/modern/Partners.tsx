@@ -1,18 +1,38 @@
 'use client';
 
+import Image from 'next/image';
+
 export function Partners() {
   const partnerGroups = [
     {
       title: '공공 / 지방자치',
-      partners: ['지방자치인재개발원', '서울특별시청', '경기도청', '강원도특별자치도교육청'],
+      partners: [
+        { name: '지방자치인재개발원', logo: '/images/partners/logodi.svg' },
+        { name: '서울특별시청', logo: '/images/partners/seoul_metropolitan_government.png' },
+        { name: '경기도청', logo: '/images/partners/gg_provincial_government.svg' },
+        { name: '강원도특별자치도교육청', logo: '/images/partners/gangwon.svg' },
+      ],
     },
     {
       title: '기업 / 브랜드',
-      partners: ['SAMSUNG', 'LG전자', '현대백화점', '교보생명', '애터미', 'Market Kurly', 'Coway'],
+      partners: [
+        { name: 'SAMSUNG', logo: '/images/partners/samsung.svg' },
+        { name: 'LG전자', logo: '/images/partners/lg_electronics.svg' },
+        { name: '현대백화점', logo: '/images/partners/hyundai_department_store.png' },
+        { name: '교보생명', logo: '/images/partners/kyobo_life_insurance.svg' },
+        { name: '애터미', logo: '/images/partners/atomy_.svg' },
+        { name: 'Market Kurly', logo: '/images/partners/market_kurly.svg' },
+        { name: 'Coway', logo: '/images/partners/coway.svg' },
+      ],
     },
     {
       title: '글로벌 / IT',
-      partners: ['Microsoft Research Asia', 'HP', 'Symantec', 'FireEye'],
+      partners: [
+        { name: 'Microsoft Research Asia', logo: '/images/partners/microsoft_research_asia.svg' },
+        { name: 'HP', logo: '/images/partners/hp.svg' },
+        { name: 'Symantec', logo: '/images/partners/symantec.svg' },
+        { name: 'FireEye', logo: '/images/partners/fireeye.svg' },
+      ],
     },
   ];
 
@@ -46,11 +66,11 @@ export function Partners() {
         </div>
 
         {/* Partner Groups */}
-        <div className="space-y-16">
+        <div className="space-y-24">
           {partnerGroups.map((group, index) => (
             <div key={index}>
               <h3
-                className="text-xl font-bold mb-8 flex items-center gap-3"
+                className="text-xl font-bold mb-10 flex items-center gap-3"
                 style={{ color: 'var(--color-primary-dark)' }}
               >
                 <span
@@ -60,27 +80,26 @@ export function Partners() {
                 {group.title}
               </h3>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-4 md:gap-6">
                 {group.partners.map((partner, i) => (
-                  <span
+                  <div
                     key={i}
-                    className="px-6 py-3 text-sm font-medium transition-all duration-300 border"
-                    style={{
-                      backgroundColor: 'white',
-                      color: 'var(--color-charcoal)',
-                      borderColor: 'transparent',
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.borderColor = 'var(--color-gold)';
-                      e.currentTarget.style.color = 'var(--color-primary-dark)';
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.borderColor = 'transparent';
-                      e.currentTarget.style.color = 'var(--color-charcoal)';
-                    }}
+                    className="group relative flex items-center justify-center p-4 bg-white/50 rounded-lg transition-all duration-500 hover:bg-white hover:shadow-lg hover:shadow-gray-200/50 aspect-[4/3]"
                   >
-                    {partner}
-                  </span>
+                    <div className="relative w-full h-full transition-all duration-300 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
+                      <Image
+                        src={partner.logo}
+                        alt={partner.name}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 33vw, (max-width: 1200px) 20vw, 12vw"
+                      />
+                    </div>
+                    {/* Name Tooltip */}
+                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none shadow-xl">
+                      {partner.name}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
