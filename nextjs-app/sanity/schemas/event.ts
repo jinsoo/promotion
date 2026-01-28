@@ -13,7 +13,6 @@ const event = {
       name: 'date',
       title: '날짜',
       type: 'date',
-      validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'views',
