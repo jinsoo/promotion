@@ -11,6 +11,7 @@ interface Announcer {
   category: string[];
   affiliation: string;
   photo: any;
+  priority?: number;
 }
 
 // Design-specific styles
@@ -72,6 +73,11 @@ export default function AnnouncerClient({ announcers, designType = 'default' }: 
     return categories.map((c) => labels[c] || c).join(', ');
   };
 
+  // 중요도(priority) 기준 내림차순 정렬 (기본값 100)
+  const sortedAnnouncers = [...announcers].sort((a, b) => {
+    return (b.priority ?? 100) - (a.priority ?? 100);
+  });
+
   return (
     <div className={styles.container}>
       <div className="max-w-5xl mx-auto px-6">
@@ -88,7 +94,7 @@ export default function AnnouncerClient({ announcers, designType = 'default' }: 
 
         {/* Profile Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {announcers.map((announcer) => (
+          {sortedAnnouncers.map((announcer) => (
             <Link
               key={announcer._id}
               href={`/announcer/${announcer._id}`}
