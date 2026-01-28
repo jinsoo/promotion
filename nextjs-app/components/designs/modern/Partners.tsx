@@ -38,12 +38,11 @@ export function Partners() {
 
   return (
     <section
-      className="py-40"
-      style={{ backgroundColor: 'var(--color-bg-warm)' }}
+      className="py-24 bg-[var(--color-bg-warm)] overflow-hidden"
     >
       <div className="w-[90%] max-w-[1400px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <span
             className="text-sm font-bold tracking-widest uppercase"
             style={{ color: 'var(--color-gold)' }}
@@ -66,41 +65,44 @@ export function Partners() {
         </div>
 
         {/* Partner Groups */}
-        <div className="space-y-24">
+        <div className="space-y-12">
           {partnerGroups.map((group, index) => (
-            <div key={index}>
+            <div key={index} className="pause-on-hover px-4">
               <h3
-                className="text-xl font-bold mb-10 flex items-center gap-3"
+                className="text-lg font-bold mb-6 flex items-center gap-3"
                 style={{ color: 'var(--color-primary-dark)' }}
               >
                 <span
-                  className="w-1 h-8"
+                  className="w-1 h-6"
                   style={{ backgroundColor: 'var(--color-gold)' }}
                 />
                 {group.title}
               </h3>
 
-              <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-4 md:gap-6">
-                {group.partners.map((partner, i) => (
-                  <div
-                    key={i}
-                    className="group relative flex items-center justify-center p-4 bg-white/50 rounded-lg transition-all duration-500 hover:bg-white hover:shadow-lg hover:shadow-gray-200/50 aspect-[4/3]"
-                  >
-                    <div className="relative w-full h-full transition-all duration-300 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                      <Image
-                        src={partner.logo}
-                        alt={partner.name}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 768px) 33vw, (max-width: 1200px) 20vw, 12vw"
-                      />
+              <div className="relative flex overflow-hidden group/marquee">
+                <div className={`flex gap-10 py-4 ${index % 2 === 0 ? 'animate-marquee' : 'animate-marquee-slow'}`}>
+                  {/* Duplicate exactly once for seamless -50% translation */}
+                  {[...group.partners, ...group.partners].map((partner, i) => (
+                    <div
+                      key={i}
+                      className="group relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
+                    >
+                      <div className="relative w-full h-full transition-all duration-300 grayscale brightness-[0.7] group-hover:grayscale-0 group-hover:brightness-100">
+                        <Image
+                          src={partner.logo}
+                          alt={partner.name}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 768px) 100px, 160px"
+                        />
+                      </div>
+                      {/* Name Tooltip - Moved to top and increased z-index */}
+                      <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded-md opacity-0 group-hover:opacity-100 transition-all transform group-hover:-translate-y-1 whitespace-nowrap z-50 pointer-events-none shadow-2xl after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-top-gray-900">
+                        {partner.name}
+                      </div>
                     </div>
-                    {/* Name Tooltip */}
-                    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none shadow-xl">
-                      {partner.name}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           ))}
