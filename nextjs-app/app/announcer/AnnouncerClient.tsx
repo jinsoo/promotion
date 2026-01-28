@@ -73,9 +73,9 @@ export default function AnnouncerClient({ announcers, designType = 'default' }: 
     return categories.map((c) => labels[c] || c).join(', ');
   };
 
-  // 중요도(priority) 기준 내림차순 정렬 (기본값 100)
+  // 중요도(priority) 기준 오름차순 정렬 (0이 최상단, 기본값 100)
   const sortedAnnouncers = [...announcers].sort((a, b) => {
-    return (b.priority ?? 100) - (a.priority ?? 100);
+    return (a.priority ?? 100) - (b.priority ?? 100);
   });
 
   return (

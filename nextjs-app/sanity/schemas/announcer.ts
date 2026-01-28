@@ -67,7 +67,7 @@ const announcer = {
       name: 'priority',
       title: '중요도',
       type: 'number',
-      description: '숫자가 높을수록 상단에 표시됩니다 (기본값: 100)',
+      description: '숫자가 낮을수록 상단에 표시됩니다 (예: 0이 최상단, 기본값: 100)',
       initialValue: 100,
       validation: (Rule: any) => Rule.min(0).max(100),
     },
