@@ -87,7 +87,7 @@ export default function EventsClient({ events }: { events: Event[] }) {
           <span className={`${styles.label} font-bold tracking-wider text-sm`}>
             EVENTS
           </span>
-          <h1 className={`text-3xl md:text-4xl font-bold mt-2 ${styles.title}`}>행사 포트폴리오</h1>
+          <h1 className={`text-3xl md:text-4xl font-bold mt-2 ${styles.title}`}>포트폴리오</h1>
           <p className={`${styles.subtitle} mt-4`}>
             공식행사MC, 쇼호스트, 입찰PT, 기업교육 등 다양한 현장
           </p>
