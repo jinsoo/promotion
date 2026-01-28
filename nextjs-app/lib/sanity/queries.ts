@@ -11,6 +11,7 @@ export const eventsQuery = groq`
     location,
     description,
     "host": host->name,
+    category,
     images
   }
 `;
