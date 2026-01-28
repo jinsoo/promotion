@@ -83,7 +83,7 @@ export function Partners() {
                         key={`set1-${i}`}
                         className="group/item relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
                       >
-                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[1.8] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100">
+                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[2.5] contrast-[1.2] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100 group-hover/item:contrast-100">
                           <Image
                             src={partner.logo}
                             alt={partner.name}
@@ -106,7 +106,7 @@ export function Partners() {
                         key={`set2-${i}`}
                         className="group/item relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
                       >
-                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[1.8] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100">
+                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[2.5] contrast-[1.2] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100 group-hover/item:contrast-100">
                           <Image
                             src={partner.logo}
                             alt={partner.name}
@@ -129,7 +129,7 @@ export function Partners() {
                         key={`set3-${i}`}
                         className="group/item relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
                       >
-                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[1.8] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100">
+                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[2.5] contrast-[1.2] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100 group-hover/item:contrast-100">
                           <Image
                             src={partner.logo}
                             alt={partner.name}
@@ -152,7 +152,7 @@ export function Partners() {
                         key={`set4-${i}`}
                         className="group/item relative flex-shrink-0 w-24 md:w-32 lg:w-40 flex items-center justify-center transition-all duration-300 aspect-[4/1]"
                       >
-                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[1.8] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100">
+                        <div className="relative w-full h-full transition-all duration-300 grayscale invert brightness-[2.5] contrast-[1.2] group-hover/item:grayscale-0 group-hover/item:invert-0 group-hover/item:brightness-100 group-hover/item:contrast-100">
                           <Image
                             src={partner.logo}
                             alt={partner.name}
