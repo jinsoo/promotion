@@ -74,7 +74,7 @@ export function Partners() {
                 {group.title}
               </h3>
 
-              <div className="relative flex overflow-hidden group/marquee">
+              <div className="relative flex overflow-hidden">
                 <div className={`flex flex-nowrap ${index % 2 === 0 ? 'animate-marquee' : 'animate-marquee-slow'}`}>
                   {/* First set of logos */}
                   <div className="flex gap-10 py-4 pr-10 flex-shrink-0">
@@ -91,10 +91,6 @@ export function Partners() {
                             className="object-contain"
                             sizes="(max-width: 768px) 100px, 160px"
                           />
-                        </div>
-                        {/* Name Tooltip */}
-                        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-md border border-white/10 opacity-0 group-hover/item:opacity-100 transition-all transform group-hover/item:-translate-y-1 whitespace-nowrap z-50 pointer-events-none shadow-2xl after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-top-white/10">
-                          {partner.name}
                         </div>
                       </div>
                     ))}
@@ -115,10 +111,6 @@ export function Partners() {
                             sizes="(max-width: 768px) 100px, 160px"
                           />
                         </div>
-                        {/* Name Tooltip */}
-                        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-md border border-white/10 opacity-0 group-hover/item:opacity-100 transition-all transform group-hover/item:-translate-y-1 whitespace-nowrap z-50 pointer-events-none shadow-2xl after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-top-white/10">
-                          {partner.name}
-                        </div>
                       </div>
                     ))}
                   </div>
@@ -138,10 +130,6 @@ export function Partners() {
                             sizes="(max-width: 768px) 100px, 160px"
                           />
                         </div>
-                        {/* Name Tooltip */}
-                        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-md border border-white/10 opacity-0 group-hover/item:opacity-100 transition-all transform group-hover/item:-translate-y-1 whitespace-nowrap z-50 pointer-events-none shadow-2xl after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-top-white/10">
-                          {partner.name}
-                        </div>
                       </div>
                     ))}
                   </div>
@@ -160,10 +148,6 @@ export function Partners() {
                             className="object-contain"
                             sizes="(max-width: 768px) 100px, 160px"
                           />
-                        </div>
-                        {/* Name Tooltip */}
-                        <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-md border border-white/10 opacity-0 group-hover/item:opacity-100 transition-all transform group-hover/item:-translate-y-1 whitespace-nowrap z-50 pointer-events-none shadow-2xl after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-top-white/10">
-                          {partner.name}
                         </div>
                       </div>
                     ))}

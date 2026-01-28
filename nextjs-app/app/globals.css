@@ -71,8 +71,4 @@ html {
   animation: marquee 20s linear infinite;
 }
 
-.pause-on-hover:hover .animate-marquee,
-.pause-on-hover:hover .animate-marquee-slow,
-.pause-on-hover:hover .animate-marquee-fast {
-  animation-play-state: paused;
-}
+
