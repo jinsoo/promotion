@@ -5,7 +5,7 @@ import { Users } from 'lucide-react';
 
 export function Announcer() {
   return (
-    <section className="relative py-40 flex items-center overflow-hidden">
+    <section id="announcer" className="relative py-40 flex items-center overflow-hidden">
       {/* Background Image with Parallax-like fixed attachment */}
       <div 
         className="absolute inset-0 z-0"

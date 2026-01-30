@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Activity, Award, Settings } from 'lucide-react';
 
 export function Intro() {
@@ -42,67 +43,70 @@ export function Intro() {
           </div>
 
           {/* Right Column: Values */}
-          <div className="w-full lg:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-              {/* Value 1 */}
-              <div 
-                className="p-8 lg:p-10 rounded-sm hover:-translate-y-2 transition-transform duration-300"
+          <div className="w-full lg:w-1/2">
+            <div className="flex flex-col gap-4">
+              {/* Value 1 - 교육커리큘럼 */}
+              <Link 
+                href="#curriculum"
+                className="block p-5 lg:p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
                 style={{ 
                   backgroundColor: 'var(--color-business-accent)',
                   borderTop: '2px solid var(--color-business-secondary)'
                 }}
               >
                   <Activity 
-                    className="w-8 h-8 mb-6" 
+                    className="w-6 h-6 mb-3" 
                     style={{ color: 'var(--color-business-secondary)' }}
                   />
-                  <h3 className="text-xl font-bold mb-4 text-white">
+                  <h3 className="text-lg font-bold mb-2 text-white">
                     진단 기반 교육
                   </h3>
-                  <p className="text-white/60 leading-relaxed">
+                  <p className="text-white/60 leading-relaxed text-sm">
                     단순 강의 매칭이 아닌 조직 문제 분석을 통한 맞춤형 커리큘럼 설계
                   </p>
-              </div>
+              </Link>
 
-              {/* Value 2 */}
-              <div 
-                className="p-8 lg:p-10 rounded-sm hover:-translate-y-2 transition-transform duration-300 md:mt-12"
+              {/* Value 2 - 아나운서 */}
+              <Link 
+                href="#announcer"
+                className="block p-5 lg:p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
                 style={{ 
                   backgroundColor: '#222',
                   borderTop: '2px solid var(--color-business-secondary)'
                 }}
               >
                   <Award 
-                    className="w-8 h-8 mb-6" 
+                    className="w-6 h-6 mb-3" 
                     style={{ color: 'var(--color-business-secondary)' }}
                   />
-                  <h3 className="text-xl font-bold mb-4 text-white">
+                  <h3 className="text-lg font-bold mb-2 text-white">
                     검증된 전문가
                   </h3>
-                  <p className="text-white/60 leading-relaxed">
+                  <p className="text-white/60 leading-relaxed text-sm">
                     아나운서 및 쇼호스트 실무 경력을 보유한 최정상급 전문 인력
                   </p>
-              </div>
+              </Link>
 
-              {/* Value 3 */}
-              <div 
-                className="p-8 lg:p-10 rounded-sm hover:-translate-y-2 transition-transform duration-300"
+              {/* Value 3 - 포트폴리오 */}
+              <Link 
+                href="#portfolio"
+                className="block p-5 lg:p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300 cursor-pointer"
                 style={{ 
                   backgroundColor: 'var(--color-business-accent)',
                   borderTop: '2px solid var(--color-business-secondary)'
                 }}
               >
                   <Settings 
-                    className="w-8 h-8 mb-6" 
+                    className="w-6 h-6 mb-3" 
                     style={{ color: 'var(--color-business-secondary)' }}
                   />
-                  <h3 className="text-xl font-bold mb-4 text-white">
+                  <h3 className="text-lg font-bold mb-2 text-white">
                     원스톱 매니지먼트
                   </h3>
-                  <p className="text-white/60 leading-relaxed">
+                  <p className="text-white/60 leading-relaxed text-sm">
                     기획부터 연사 섭외, 현장 컨트롤까지 밀착 관리 시스템
                   </p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

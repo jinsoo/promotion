@@ -5,7 +5,7 @@ import { Briefcase } from 'lucide-react';
 
 export function Portfolio() {
   return (
-    <section className="relative py-40 flex items-center overflow-hidden">
+    <section id="portfolio" className="relative py-40 flex items-center overflow-hidden">
       {/* Background Image with Parallax-like fixed attachment */}
       <div 
         className="absolute inset-0 z-0"
