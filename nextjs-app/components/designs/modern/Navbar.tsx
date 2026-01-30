@@ -20,8 +20,8 @@ export function Navbar() {
   const navLinks = [
     { href: '/#about', label: 'Expertise' },
     { href: '/#ceo', label: 'Leadership' },
-    { href: '/#services', label: 'Services' },
-    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/class', label: 'Curriculum' },
+    { href: '/portfolio/events', label: 'Portfolio' },
     { href: '/announcer', label: 'Network' },
     { href: '/#partners', label: 'Clients' },
     { href: '/#contact', label: 'Contact', isGold: true },

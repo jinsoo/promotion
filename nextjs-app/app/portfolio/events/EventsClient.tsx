@@ -74,11 +74,11 @@ export default function EventsClient({ events }: { events: Event[] }) {
         {/* Breadcrumb */}
         <div className="mb-8">
           <Link
-            href="/portfolio"
+            href="/"
             className={`inline-flex items-center gap-2 transition-colors text-sm ${styles.breadcrumb}`}
           >
             <ChevronLeft className="w-4 h-4" />
-            포트폴리오
+             홈
           </Link>
         </div>
 
@@ -87,7 +87,7 @@ export default function EventsClient({ events }: { events: Event[] }) {
           <span className={`${styles.label} font-bold tracking-wider text-sm`}>
             EVENTS
           </span>
-          <h1 className={`text-3xl md:text-4xl font-bold mt-2 ${styles.title}`}>포트폴리오</h1>
+          <h1 className={`text-3xl md:text-4xl font-bold mt-2 ${styles.title}`}>포트폴리오 (행사)</h1>
           <p className={`${styles.subtitle} mt-4`}>
             공식행사MC, 쇼호스트, 입찰PT, 기업교육 등 다양한 현장
           </p>

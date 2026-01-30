@@ -46,7 +46,7 @@ export function Portfolio() {
 
         <div>
             <Link
-                href="/portfolio"
+                href="/portfolio/events"
                 className="group relative inline-flex items-center justify-center px-12 py-6 overflow-hidden font-bold text-white transition-all duration-300 bg-transparent border-2 border-white rounded-none hover:bg-white hover:text-black"
             >
                 <span className="w-full h-full flex items-center gap-3">

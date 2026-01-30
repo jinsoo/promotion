@@ -45,7 +45,7 @@ const designStyles = {
   },
 };
 
-export default function BusinessClient({ businessItems }: { businessItems: BusinessItem[] }) {
+export default function ClassClient({ businessItems }: { businessItems: BusinessItem[] }) {
   const styles = designStyles[designType as keyof typeof designStyles] || designStyles.default;
 
   return (
@@ -54,22 +54,22 @@ export default function BusinessClient({ businessItems }: { businessItems: Busin
         {/* Breadcrumb */}
         <div className="mb-8">
           <Link
-            href="/portfolio"
+            href="/"
             className={`inline-flex items-center gap-2 transition-colors text-sm ${styles.breadcrumb}`}
           >
             <ChevronLeft className="w-4 h-4" />
-            포트폴리오
+            홈
           </Link>
         </div>
 
         {/* Header */}
         <div className="text-center mb-12">
-          <span className={`${styles.label} font-bold tracking-wider text-sm`}>
-            BUSINESS
+          <span className={`${styles.label} font-bold tracking-wider text-sm text-uppercase`}>
+            CURRICULUM
           </span>
-          <h1 className={`text-3xl md:text-4xl font-bold mt-2 ${styles.title}`}>사업 포트폴리오</h1>
+          <h1 className={`text-3xl md:text-4xl font-bold mt-2 ${styles.title}`}>교육 커리큘럼</h1>
           <p className={`${styles.subtitle} mt-4`}>
-            와이 커뮤니케이션의 주요 사업 영역
+            와이 커뮤니케이션의 주요 사업 영역과 전문 교육 과정
           </p>
         </div>
 

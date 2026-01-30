@@ -20,8 +20,8 @@ export function Navbar() {
   const navLinks = [
     { href: '/#about', label: '소개', labelEn: 'About' },
     { href: '/#ceo', label: 'CEO', labelEn: 'CEO' },
-    { href: '/#services', label: '핵심서비스', labelEn: 'Services' },
-    { href: '/portfolio', label: '포트폴리오', labelEn: 'Portfolio' },
+    { href: '/class', label: '교육커리큘럼', labelEn: 'Curriculum' },
+    { href: '/portfolio/events', label: '포트폴리오', labelEn: 'Portfolio' },
     { href: '/announcer', label: '아나운서', labelEn: 'Announcer' },
     { href: '/#partners', label: '파트너사', labelEn: 'Partners' },
     { href: '/#contact', label: '문의하기', labelEn: 'Contact' },

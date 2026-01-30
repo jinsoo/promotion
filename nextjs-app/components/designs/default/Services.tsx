@@ -8,9 +8,9 @@ export function Services() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-sky-600 font-bold tracking-wider text-sm">
-            CORE SERVICES
+            EDUCATION CURRICULUM
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">핵심 서비스 분야</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">교육 커리큘럼</h2>
           <p className="text-slate-500 mt-4">
             검증된 데이터와 실전 노하우를 바탕으로 최상의 솔루션을 제안합니다.
           </p>

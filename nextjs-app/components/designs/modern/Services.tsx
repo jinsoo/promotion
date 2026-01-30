@@ -52,13 +52,13 @@ export function Services() {
               className="text-sm font-bold tracking-widest uppercase"
               style={{ color: 'var(--color-gold)' }}
             >
-              CORE SERVICES
+              EDUCATION CURRICULUM
             </span>
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-black mt-4 text-white"
               style={{ fontFamily: "'Noto Serif KR', serif", letterSpacing: '-0.03em' }}
             >
-              핵심 서비스 분야
+              교육 커리큘럼
             </h2>
           </div>
           <p className="text-white/70 max-w-md lg:text-right">
