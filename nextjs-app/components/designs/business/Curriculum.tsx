@@ -12,6 +12,7 @@ const categories = [
     title: '세일즈 강사 양성과정',
     description: '쇼호스트의 실전 화법을 이식하여 현장을 장악하는 전문가를 양성합니다. 제품 특징점 분석부터 1:1 피드백까지 밀착 교육합니다.',
     image: '/images/class/sales.jpg',
+    modalHeaderImage: '/images/class/sales_header.jpg',
     englishTitle: 'Sales Master Class',
     fullTitle: '세일즈 마스터 클래스',
     tagline: '20년 이상 경력 전문 쇼호스트가 직접 교육하는 세일즈 마스터 클래스',
@@ -22,6 +23,7 @@ const categories = [
     title: '의정 스피치 컨설팅',
     description: '신뢰감을 주는 목소리와 정교한 논리로 의정 활동의 격을 높입니다. 지방의회 의원 대상 스피치 및 이미지 브랜딩에 특화되어 있습니다.',
     image: '/images/class/speech.jpg',
+    modalHeaderImage: '/images/class/political_header.jpg',
     englishTitle: 'Political Leadership',
     fullTitle: '의정 및 공직자 스피치',
     tagline: '현직 아나운서와 함께하는 신뢰의 언어로 정책의 가치를 증명하는 리더십 과정',
@@ -32,6 +34,7 @@ const categories = [
     title: 'SNS 브랜딩 전략',
     description: '인플루언서, 아나운서, 유튜버의 노하우를 담은 퍼스널 브랜딩 전략을 제안합니다. 타겟 심리를 움직이는 콘텐츠 소통법을 공유합니다.',
     image: '/images/class/branding.jpg',
+    modalHeaderImage: '/images/class/branding_header.jpg',
     englishTitle: 'Digital Branding',
     fullTitle: 'AI 기반 SNS 퍼스널 브랜딩',
     tagline: '유튜버, 인플루언서가 직접 컨설팅하는 생성형 AI 활용 과정',
@@ -42,6 +45,7 @@ const categories = [
     title: '전문 연사 매칭',
     description: '국제회의, 런칭쇼, 시상식 등의 품격을 높이는 아나운서 및 MC를 섭외합니다. 기획부터 현장 컨트롤까지 완벽한 매니지먼트를 보장합니다.',
     image: '/images/class/mc.jpg',
+    modalHeaderImage: '/images/class/mc_header.jpg',
     englishTitle: 'Professional Moderator',
     fullTitle: '전문 연사 매칭 및 행사 매니지먼트',
     tagline: '행사의 격을 결정하는 완벽한 흐름과 전문가 큐레이션 서비스',
@@ -269,6 +273,7 @@ interface Category {
   title: string;
   description: string;
   image: string;
+  modalHeaderImage?: string;
   englishTitle: string;
   fullTitle: string;
   tagline: string;
@@ -392,19 +397,37 @@ export function Curriculum() {
             </button>
 
             {/* Modal Header */}
-            <div className="p-5 md:p-8 border-b border-white/10">
-              <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#c9a962] uppercase">
-                {selectedCategory.englishTitle}
-              </span>
-              <h3
-                className="text-lg md:text-2xl font-bold text-white mt-1 md:mt-2 pr-8"
-                style={{ fontFamily: "'Noto Serif KR', serif" }}
-              >
-                {selectedCategory.fullTitle}
-              </h3>
-              <p className="text-white/50 text-xs md:text-sm mt-2">
-                {selectedCategory.tagline}
-              </p>
+            <div className="relative overflow-hidden">
+              {/* Background Image */}
+              {selectedCategory.modalHeaderImage && (
+                <>
+                  <div className="absolute inset-0">
+                    <Image
+                      src={selectedCategory.modalHeaderImage}
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60" />
+                </>
+              )}
+              
+              {/* Content */}
+              <div className="relative p-5 md:p-8 border-b border-white/10">
+                <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#c9a962] uppercase">
+                  {selectedCategory.englishTitle}
+                </span>
+                <h3
+                  className="text-lg md:text-2xl font-bold text-white mt-1 md:mt-2 pr-8"
+                  style={{ fontFamily: "'Noto Serif KR', serif" }}
+                >
+                  {selectedCategory.fullTitle}
+                </h3>
+                <p className="text-white/70 text-xs md:text-sm mt-2">
+                  {selectedCategory.tagline}
+                </p>
+              </div>
             </div>
 
             {/* Course List */}
