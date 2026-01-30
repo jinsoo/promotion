@@ -28,7 +28,7 @@ export const businessQuery = groq`
   }
 `;
 
-// 아나운서 목록
+// 아나운서 목록 (기본 정보만 - 빠른 로딩)
 export const announcersQuery = groq`
   *[_type == "announcer"] {
     _id,
