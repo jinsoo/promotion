@@ -26,7 +26,7 @@ export function Navbar() {
   const navLinks = [
     { href: '/#about', label: '소개' },
     { href: '/#ceo', label: 'CEO 인사말' },
-    { href: '/#Curriculum', label: '교육커리큘럼' },
+    { href: '/#curriculum', label: '교육커리큘럼' },
     { href: '/portfolio/events', label: '포트폴리오' },
     { href: '/announcer', label: '아나운서' },
     { href: '/#partners', label: '파트너사' },

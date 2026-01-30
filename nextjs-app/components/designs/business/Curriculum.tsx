@@ -8,7 +8,7 @@ import { X, ChevronRight } from 'lucide-react';
 const categories = [
   {
     id: 'sales',
-    badge: '교육',
+    badge: '세일즈',
     title: '세일즈 강사 양성과정',
     description: '쇼호스트의 실전 화법을 이식하여 현장을 장악하는 전문가를 양성합니다. 제품 특징점 분석부터 1:1 피드백까지 밀착 교육합니다.',
     image: '/images/class/sales.jpg',
