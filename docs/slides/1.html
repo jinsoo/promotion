@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hero Cover</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            font-family: 'Noto Serif KR', serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #1a1a1a; /* Deep Black */
+        }
+        /* Decorative Background Elements */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 50% 50%, #2d3436 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        .gold-accent-corner {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 100px;
+            height: 100px;
+            border-top: 2px solid #c9a962;
+            border-left: 2px solid #c9a962;
+            opacity: 0.5;
+        }
+        .gold-accent-corner-bottom {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 100px;
+            height: 100px;
+            border-bottom: 2px solid #c9a962;
+            border-right: 2px solid #c9a962;
+            opacity: 0.5;
+        }
+        
+        /* Content Styling */
+        .content-wrapper {
+            z-index: 10;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+        }
+        .quote-icon {
+            font-size: 3rem;
+            color: #c9a962; /* Champagne Gold */
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        .main-copy {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.02em;
+            margin-bottom: 3rem;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .main-copy span {
+            color: #ffffff;
+            display: block;
+        }
+        .divider {
+            width: 80px;
+            height: 3px;
+            background-color: #c9a962;
+            margin-bottom: 2.5rem;
+        }
+        .sub-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: #c9a962;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        /* Subtle glow effect for gold elements */
+        .glow-gold {
+            text-shadow: 0 0 15px rgba(201, 169, 98, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Background Pattern -->
+<div class="bg-pattern"></div>
+<!-- Corner Accents -->
+<div class="gold-accent-corner"></div>
+<div class="gold-accent-corner-bottom"></div>
+<!-- Main Content -->
+<div class="content-wrapper">
+<div class="quote-icon">
+<i class="fas fa-quote-left"></i>
+</div>
+<div class="main-copy">
+<p>
+                    "차가운 마이크에 진심의 온기를,<br/>
+<span class="font-light mt-2">브랜드의 언어에 전략적 가치를 더합니다."</span>
+</p>
+</div>
+<div class="divider"></div>
+<div class="sub-text">
+<p>Professional Communication Solution</p>
+</div>
+</div>
+</div>
+</body>
+</html>

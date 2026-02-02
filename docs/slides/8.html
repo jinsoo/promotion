@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Core Values</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #1a1a1a; /* Deep Black */
+            padding: 80px;
+            box-sizing: border-box;
+        }
+
+        /* Header Section */
+        .header-section {
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .label-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.3em;
+            color: #c9a962; /* Champagne Gold */
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .title-line {
+            height: 2px;
+            width: 100px;
+            background-color: #c9a962;
+            margin-left: 30px;
+            opacity: 0.7;
+        }
+
+        /* Cards Container */
+        .cards-container {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+            align-items: stretch;
+            z-index: 10;
+        }
+
+        /* Individual Card */
+        .value-card {
+            flex: 1;
+            background-color: #222222;
+            border-top: 4px solid #c9a962;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            background-color: #252525;
+        }
+
+        /* Card Content */
+        .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(201, 169, 98, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 35px;
+            color: #c9a962;
+            font-size: 32px;
+            border: 1px solid rgba(201, 169, 98, 0.2);
+        }
+
+        .card-title {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .card-desc {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            word-break: keep-all;
+        }
+
+        /* Background Number */
+        .bg-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.03);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* Decorative Background */
+        .bg-circle {
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background-color: rgba(201, 169, 98, 0.03);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .arrow-icon {
+            margin-top: auto;
+            color: #c9a962;
+            opacity: 0.5;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="slide-container">
+<!-- Decorative Background -->
+<div class="bg-circle"></div>
+<!-- Header -->
+<div class="header-section">
+<span class="label-text">Core Values</span>
+<div class="title-wrapper">
+<h1 class="main-title">핵심 차별점</h1>
+<div class="title-line"></div>
+</div>
+</div>
+<!-- Cards Grid -->
+<div class="cards-container">
+<!-- Card 1 -->
+<div class="value-card">
+<div class="bg-number">01</div>
+<div class="icon-wrapper">
+<i class="fas fa-magnifying-glass-chart"></i>
+</div>
+<h2 class="card-title">진단 기반 교육</h2>
+<div class="card-desc">
+<p>조직의 현재 상황과 문제를 정밀하게 분석하여, 단순 강의가 아닌 실질적 해결책을 제시하는 맞춤형 커리큘럼을 설계합니다.</p>
+</div>
+<div class="arrow-icon">
+<span>Analysis</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="value-card">
+<div class="bg-number">02</div>
+<div class="icon-wrapper">
+<i class="fas fa-trophy"></i>
+</div>
+<h2 class="card-title">검증된 전문가</h2>
+<div class="card-desc">
+<p>아나운서 및 쇼호스트로서 최정상의 실무 경력을 보유한 전문가 그룹이 현장의 생생한 노하우와 품격 있는 화법을 전수합니다.</p>
+</div>
+<div class="arrow-icon">
+<span>Expertise</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="value-card">
+<div class="bg-number">03</div>
+<div class="icon-wrapper">
+<i class="fas fa-bolt"></i>
+</div>
+<h2 class="card-title">원스톱 매니지먼트</h2>
+<div class="card-desc">
+<p>초기 기획 단계부터 적합한 전문 연사 섭외, 그리고 행사 당일 현장 컨트롤까지 전 과정을 밀착 관리하여 완벽한 결과를 만듭니다.</p>
+</div>
+<div class="arrow-icon">
+<span>Management</span>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

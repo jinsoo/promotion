@@ -10,6 +10,10 @@ images/*.*
 images/*
 nextjs-app/scripts/optimize_images.js
 nextjs-app/scripts/update_sanity_events.js
-.gitignore
 nextjs-app/scripts/optimize_announcers.js
 nextjs-app/scripts/update_sanity_announcers.js
+.DS_Store
+**/.DS_Store
+node_modules/
+.env*
+
