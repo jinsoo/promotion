@@ -42,3 +42,4 @@ next-env.d.ts
 .grepai/
 scripts/*
 promotion/docs/*
+docs/*
