@@ -26,44 +26,44 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            background-color: #1a1a1a; /* Deep Black */
-            padding: 60px 80px;
+            background-color: #1a1a1a;
+            padding: 55px 80px;
             box-sizing: border-box;
         }
 
         /* Header Section */
         .header-section {
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             position: relative;
             z-index: 10;
         }
 
         .label-text {
             font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 0.3em;
-            color: #c9a962; /* Champagne Gold */
+            color: #c9a962;
             text-transform: uppercase;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: block;
         }
 
         .main-title {
             font-family: 'Noto Serif KR', serif;
-            font-size: 42px;
+            font-size: 36px;
             font-weight: 700;
             color: #ffffff;
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             line-height: 1.2;
         }
         
         .sub-message {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 300;
             color: rgba(255, 255, 255, 0.8);
             border-left: 3px solid #c9a962;
-            padding-left: 20px;
+            padding-left: 18px;
             line-height: 1.5;
         }
         
@@ -77,19 +77,20 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            gap: 25px;
+            gap: 20px;
             flex: 1;
-            margin-bottom: 40px;
+            max-height: 480px;
         }
 
         .info-card {
             background-color: #242424;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 30px;
+            padding: 24px 28px;
             display: flex;
             align-items: flex-start;
             position: relative;
             transition: all 0.3s ease;
+            height: 100%;
         }
 
         .info-card:hover {
@@ -100,101 +101,71 @@
         }
 
         .card-icon {
-            font-size: 32px;
+            font-size: 22px;
             color: #c9a962;
             background-color: rgba(201, 169, 98, 0.1);
-            width: 60px;
-            height: 60px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 25px;
+            margin-right: 16px;
             flex-shrink: 0;
         }
 
         .card-content {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
         }
 
         .card-title {
             font-family: 'Noto Serif KR', serif;
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title-eng {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            color: #c9a962;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 3px;
         }
 
         .card-desc {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.75);
             font-weight: 300;
             word-break: keep-all;
+            margin-top: 10px;
         }
 
-        /* Bottom Stats Bar */
-        .stats-bar {
-            background-color: #2d3436;
-            border-radius: 8px;
-            padding: 20px 40px;
+        .card-features {
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 12px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-left: 4px solid #c9a962;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
-        
-        .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -40px; /* Adjust based on spacing */
-            top: 50%;
-            transform: translateY(-50%);
-            height: 30px;
-            width: 1px;
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        /* For 5 items, justify-between handles spacing well, manual dividers might need precise positioning or flex gaps. 
-           Let's use a simpler flex gap approach with borders on right of element instead. */
-           
-        .stats-wrapper {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-        }
-        
-        .stat-box {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 400;
-        }
-
-        .stat-value {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #c9a962;
-        }
-        
-        .stat-unit {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 300;
+        .feature-tag {
+            font-size: 12px;
+            background-color: rgba(255,255,255,0.05);
+            padding: 3px 8px;
+            border-radius: 3px;
+            color: rgba(255,255,255,0.65);
         }
 
         /* Decorative Elements */
@@ -207,6 +178,16 @@
             background-color: #c9a962;
             opacity: 0.5;
         }
+
+        .corner-accent {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-right: 2px solid rgba(201, 169, 98, 0.3);
+            border-bottom: 2px solid rgba(201, 169, 98, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -218,77 +199,88 @@
 <span class="label-text">Professional Team</span>
 <h1 class="main-title">전문 인력풀</h1>
 <div class="sub-message">
-<p>검증된 방송 실전 경력의 <span class="highlight">최정상급 전문 인력 16명</span>을 보유하고 있습니다.</p>
+<p>검증된 방송 실전 경력의 <span class="highlight">최정상급 전문 인력</span>을 보유하고 있습니다.</p>
 </div>
 </div>
 <!-- Grid Layout -->
 <div class="grid-container">
-<!-- Card 1 -->
-<div class="info-card">
-<div class="card-icon">
-<i class="fas fa-video"></i>
-</div>
-<div class="card-content">
-<h3 class="card-title">압도적인 생방송 경력</h3>
-<p class="card-desc">생방송 1,500회 이상의 실전 진행 경험을 보유한 베테랑 인력들이 현장의 돌발 상황에도 유연하게 대처합니다.</p>
-</div>
-</div>
-<!-- Card 2 -->
+<!-- Card 1: 주요 방송사 출신 -->
 <div class="info-card">
 <div class="card-icon">
 <i class="fas fa-tower-broadcast"></i>
 </div>
 <div class="card-content">
-<h3 class="card-title">주요 방송사 출신</h3>
-<p class="card-desc">한국경제TV, MBC, KBS, 아리랑TV 등 국내 주요 방송사 공채 아나운서 및 앵커 출신의 검증된 인재풀입니다.</p>
+<div class="card-title">
+주요 방송사 공채 출신
+<span class="card-title-eng">Licensed Broadcasters</span>
+</div>
+<p class="card-desc">한국경제TV, MBC, KBS, 아리랑TV, TBC 대구방송, SBS 등 국내 주요 방송사 공채 아나운서 및 앵커 출신의 검증된 인재풀입니다.</p>
+<div class="card-features">
+<span class="feature-tag">MBC</span>
+<span class="feature-tag">KBS</span>
+<span class="feature-tag">아리랑TV</span>
+<span class="feature-tag">한국경제TV</span>
 </div>
 </div>
-<!-- Card 3 -->
+</div>
+<!-- Card 2: 쇼호스트 & 라이브커머스 -->
 <div class="info-card">
 <div class="card-icon">
-<i class="fas fa-building-columns"></i>
+<i class="fas fa-video"></i>
 </div>
 <div class="card-content">
-<h3 class="card-title">정부·대기업 레퍼런스</h3>
-<p class="card-desc">국방부, 서울시, 삼성전자 등 정부 기관 및 글로벌 대기업의 공식 행사와 프로젝트를 성공적으로 수행했습니다.</p>
+<div class="card-title">
+쇼호스트 & 라이브커머스 전문
+<span class="card-title-eng">Live Commerce Expert</span>
+</div>
+<p class="card-desc">CJ온스타일, W쇼핑, NS홈쇼핑 등 TV홈쇼핑과 네이버, 11번가 등 라이브커머스 경력을 보유한 세일즈 전문가들이 현장 경험을 공유합니다.</p>
+<div class="card-features">
+<span class="feature-tag">TV홈쇼핑</span>
+<span class="feature-tag">라이브커머스</span>
+<span class="feature-tag">세일즈 전문</span>
 </div>
 </div>
-<!-- Card 4 -->
+</div>
+<!-- Card 3: 글로벌 역량 -->
+<div class="info-card">
+<div class="card-icon">
+<i class="fas fa-globe"></i>
+</div>
+<div class="card-content">
+<div class="card-title">
+글로벌 이중언어 진행
+<span class="card-title-eng">Bilingual MC</span>
+</div>
+<p class="card-desc">한/영/일 이중언어 구사가 가능한 아나운서들이 CES, 국제포럼, 글로벌 기업 행사 등 국제 무대에서 전문 MC로 활약하고 있습니다.</p>
+<div class="card-features">
+<span class="feature-tag">한영 진행</span>
+<span class="feature-tag">한일 진행</span>
+<span class="feature-tag">CES</span>
+<span class="feature-tag">국제포럼</span>
+</div>
+</div>
+</div>
+<!-- Card 4: 교육 전문성 겸비 -->
 <div class="info-card">
 <div class="card-icon">
 <i class="fas fa-chalkboard-user"></i>
 </div>
 <div class="card-content">
-<h3 class="card-title">교육 전문성 겸비</h3>
-<p class="card-desc">단순 진행자를 넘어 대학 겸임교수 및 전문 스피치 강사 7명 이상이 체계적이고 깊이 있는 교육 솔루션을 제공합니다.</p>
+<div class="card-title">
+대학 겸임교수 및 강사진
+<span class="card-title-eng">Professional Educators</span>
+</div>
+<p class="card-desc">서울외대, 연성대, 대림대 등 대학 겸임교수와 기업 스피치 전문 강사진이 체계적이고 깊이 있는 교육 솔루션을 제공합니다.</p>
+<div class="card-features">
+<span class="feature-tag">대학 겸임교수</span>
+<span class="feature-tag">스피치 강사</span>
+<span class="feature-tag">기업 교육</span>
 </div>
 </div>
 </div>
-<!-- Bottom Stats -->
-<div class="stats-bar">
-<div class="stats-wrapper">
-<div class="stat-box">
-<span class="stat-label">아나운서</span>
-<span class="stat-value">16<span class="stat-unit">명</span></span>
 </div>
-<div class="stat-box">
-<span class="stat-label">MC</span>
-<span class="stat-value">13<span class="stat-unit">명</span></span>
-</div>
-<div class="stat-box">
-<span class="stat-label">강사</span>
-<span class="stat-value">7<span class="stat-unit">명</span></span>
-</div>
-<div class="stat-box">
-<span class="stat-label">외국어 아나운서</span>
-<span class="stat-value">2<span class="stat-unit">명</span></span>
-</div>
-<div class="stat-box">
-<span class="stat-label">쇼호스트</span>
-<span class="stat-value">5<span class="stat-unit">명</span></span>
-</div>
-</div>
-</div>
+<!-- Corner Accent -->
+<div class="corner-accent"></div>
 </div>
 </body>
 </html>

@@ -47,8 +47,8 @@ export function Footer() {
                     Y<span style={{ color: 'var(--color-business-secondary)' }}> Communication</span>
                 </Link>
                 <div className="text-white/40 text-xs lg:text-sm leading-relaxed">
-                    <p>Business License: 123-45-67890</p>
-                    <p>Address: Seoul, Republic of Korea</p>
+                    <p>Business License: 497-77-00394</p>
+                    <p>Address: 서울특별시 강남구 테헤란로 </p>
                     <p>CEO: Suhwa Oh</p>
                 </div>
             </div>

@@ -101,30 +101,38 @@
         box-shadow: 0 15px 30px rgba(0,0,0,0.4);
     }
 
-    .avatar-placeholder {
+    .avatar-wrapper {
+        position: relative;
         width: 120px;
         height: 120px;
-        background-color: #333;
-        border-radius: 50%;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+    }
+
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
         position: relative;
         border: 2px solid rgba(201, 169, 98, 0.3);
     }
 
-    .avatar-placeholder i {
-        font-size: 40px;
-        color: #555;
+    .avatar-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
     }
 
     .avatar-badge {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
         background-color: #c9a962;
         border-radius: 50%;
         display: flex;
@@ -132,6 +140,9 @@
         justify-content: center;
         font-size: 14px;
         color: #1a1a1a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        border: 2px solid #242424;
+        z-index: 10;
     }
 
     .member-name {
@@ -243,8 +254,10 @@
     <div class="team-grid">
         <!-- Member 1: 이서진 -->
         <div class="team-card">
-            <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
+            <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                    <img src="이서진.png" alt="이서진"/>
+                </div>
                 <div class="avatar-badge">
                     <i class="fas fa-microphone"></i>
                 </div>
@@ -260,8 +273,10 @@
 
         <!-- Member 2: 박새하 -->
         <div class="team-card">
-            <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
+            <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                    <img src="박새하.png" alt="박새하"/>
+                </div>
                 <div class="avatar-badge">
                     <i class="fas fa-tv"></i>
                 </div>
@@ -277,8 +292,10 @@
 
         <!-- Member 3: 송혜지 -->
         <div class="team-card">
-            <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
+            <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                    <img src="송혜지.png" alt="송혜지"/>
+                </div>
                 <div class="avatar-badge">
                     <i class="fas fa-cloud-sun"></i>
                 </div>
@@ -294,8 +311,10 @@
 
         <!-- Member 4: 권소아 -->
         <div class="team-card">
-            <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
+            <div class="avatar-wrapper">
+                <div class="avatar-placeholder">
+                    <img src="권소아.png" alt="권소아"/>
+                </div>
                 <div class="avatar-badge">
                     <i class="fas fa-globe"></i>
                 </div>
@@ -313,8 +332,7 @@
     <!-- Bottom Note -->
     <div class="bottom-note">
         <span class="note-text">
-            검증된 방송 실전 경력의 최정상급 전문 인력
-            <span class="note-highlight">16명</span> 보유
+            검증된 방송 실전 경력의 최정상급 전문 인력 다수 보유
         </span>
         <i class="fas fa-users note-icon"></i>
     </div>
