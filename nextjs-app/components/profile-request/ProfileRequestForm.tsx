@@ -214,14 +214,88 @@ export default function ProfileRequestForm() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[var(--color-business-background)] px-4">
         <div className="max-w-md w-full text-center">
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+          <div className="bg-white rounded-3xl shadow-2xl p-10 relative overflow-hidden">
+            {/* Background Sparkles */}
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+              <div className="absolute top-10 left-10 w-2 h-2 bg-[var(--color-gold)] rounded-full animate-ping" />
+              <div className="absolute bottom-10 right-10 w-3 h-3 bg-[var(--color-gold)] rounded-full animate-bounce" />
+              <div className="absolute top-1/2 right-10 w-2 h-2 bg-[var(--color-gold)] rounded-full animate-pulse" />
+            </div>
+
+            {/* Cute Hedgehog SVG Animation */}
+            <div className="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center group">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full animate-bounce"
+                style={{ animationDuration: '3s' }}
+              >
+                {/* Hedgehog Body (Spikes) */}
+                <path
+                  d="M100 40 C140 40 170 70 170 110 L170 140 C170 150 160 160 150 160 L50 160 C40 160 30 150 30 140 L30 110 C30 70 60 40 100 40"
+                  fill="#8B5E3C"
+                />
+                <path
+                  d="M40 90 L30 80 M60 60 L50 50 M100 45 L100 30 M140 60 L150 50 M160 90 L170 80"
+                  stroke="#5D3A1A"
+                  strokeWidth="8"
+                  strokeLinecap="round"
+                />
+                
+                {/* Hedgehog Face (Skin) */}
+                <path
+                  d="M60 110 C60 90 140 90 140 110 C140 135 130 155 100 155 C70 155 60 135 60 110"
+                  fill="#F5D6B5"
+                />
+                
+                {/* Eyes with Blinking Animation */}
+                <circle cx="85" cy="115" r="5" fill="#2d3436" className="animate-[pulse_2s_infinite]">
+                  <animate attributeName="ry" values="5;0.5;5" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="115" cy="115" r="5" fill="#2d3436" className="animate-[pulse_2s_infinite]">
+                  <animate attributeName="ry" values="5;0.5;5" dur="3s" repeatCount="indefinite" />
+                </circle>
+                
+                {/* Nose */}
+                <circle cx="100" cy="128" r="6" fill="#000" />
+                <circle cx="102" cy="126" r="2" fill="#fff" />
+                
+                {/* Cheeks */}
+                <circle cx="75" cy="125" r="5" fill="#FFB7B2" opacity="0.6" />
+                <circle cx="125" cy="125" r="5" fill="#FFB7B2" opacity="0.6" />
+                
+                {/* Feet */}
+                <circle cx="70" cy="160" r="8" fill="#F5D6B5" />
+                <circle cx="130" cy="160" r="8" fill="#F5D6B5" />
+
+                {/* Heart showing above */}
+                <path
+                  d="M100 30 Q105 20 115 25 T100 45 T85 25 Q95 20 100 30"
+                  fill="#FF6B6B"
+                  className="animate-pulse"
+                />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-[var(--color-business-primary)] mb-2">제출 완료!</h2>
-            <p className="text-gray-600">요청서가 성공적으로 전송되었습니다.<br />빠른 시일 내에 연락드리겠습니다.</p>
+
+            <h2 className="text-3xl font-extrabold text-[var(--color-business-primary)] mb-4">
+              저희와 함께해주셔서 감사합니다!
+            </h2>
+            <div className="space-y-4 text-gray-600 leading-relaxed">
+              <p className="text-lg">
+                소중한 정보가 안전하게 전달되었습니다.<br />
+                귀여운 고슴도치가 전송 완료 소식을 알려드려요! 🦔✨
+              </p>
+              <p>
+                보내주신 내용을 꼼꼼히 검토한 후,<br />
+                최대한 빨리 <strong>설레는 답변</strong>을 들고 연락드리겠습니다.
+              </p>
+            </div>
+            
+            <button
+              onClick={() => setSubmitStatus('idle')}
+              className="mt-8 text-sm font-medium text-[var(--color-gold)] hover:text-[var(--color-gold-dark)] underline underline-offset-4"
+            >
+              처음으로 돌아가기
+            </button>
           </div>
         </div>
       </div>
