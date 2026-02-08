@@ -290,12 +290,12 @@ export default function ProfileRequestForm() {
               </p>
             </div>
             
-            <button
-              onClick={() => setSubmitStatus('idle')}
-              className="mt-8 text-sm font-medium text-[var(--color-gold)] hover:text-[var(--color-gold-dark)] underline underline-offset-4"
+            <a
+              href="https://ycom.live"
+              className="mt-8 inline-block text-sm font-medium text-[var(--color-gold)] hover:text-[var(--color-gold-dark)] underline underline-offset-4"
             >
               처음으로 돌아가기
-            </button>
+            </a>
           </div>
         </div>
       </div>
