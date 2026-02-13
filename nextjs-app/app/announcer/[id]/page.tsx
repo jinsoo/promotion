@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, GraduationCap, Briefcase, Trophy } from 'lucide-react';
@@ -5,6 +6,39 @@ import { notFound } from 'next/navigation';
 import { client } from '@/lib/sanity/client';
 import { announcerByIdQuery } from '@/lib/sanity/queries';
 import { urlFor } from '@/lib/sanity/image';
+import { personJsonLd, breadcrumbJsonLd } from '@/lib/seo/jsonLd';
+
+// 동적 메타데이터 — 각 아나운서별 고유 title, description, OG 이미지
+export async function generateMetadata({
+  params,
+}: AnnouncerProfilePageProps): Promise<Metadata> {
+  const { id } = await params;
+  const announcer = await client.fetch(announcerByIdQuery, { id });
+
+  if (!announcer) {
+    return { title: '아나운서를 찾을 수 없습니다' };
+  }
+
+  const photoUrl = announcer.photo
+    ? urlFor(announcer.photo).width(1200).height(630).url()
+    : undefined;
+
+  return {
+    title: `${announcer.name} — ${announcer.title || '아나운서'}`,
+    description: `${announcer.name} 프로필. ${announcer.title || '아나운서'}. 학력, 경력, 포트폴리오 정보를 확인하세요. 와이 커뮤니케이션 소속.`,
+    openGraph: {
+      title: `${announcer.name} | 와이 커뮤니케이션 아나운서`,
+      description: `${announcer.name} — ${announcer.title || '아나운서'}. 프로필 및 포트폴리오.`,
+      url: `https://ycom.live/announcer/${id}`,
+      ...(photoUrl && {
+        images: [{ url: photoUrl, width: 1200, height: 630, alt: announcer.name }],
+      }),
+    },
+    alternates: {
+      canonical: `https://ycom.live/announcer/${id}`,
+    },
+  };
+}
 
 interface AnnouncerProfilePageProps {
   params: Promise<{ id: string }>;
@@ -74,6 +108,36 @@ export default async function AnnouncerProfilePage({ params }: AnnouncerProfileP
 
   return (
     <div className={styles.container}>
+      {/* Person JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            personJsonLd({
+              name: announcer.name,
+              title: announcer.title,
+              affiliation: announcer.affiliation,
+              photoUrl: announcer.photo ? urlFor(announcer.photo).width(800).url() : undefined,
+              education: announcer.education,
+              career: announcer.career,
+              id: announcer._id,
+            })
+          ),
+        }}
+      />
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbJsonLd([
+              { name: '홈', url: 'https://ycom.live' },
+              { name: '아나운서', url: 'https://ycom.live/announcer' },
+              { name: announcer.name, url: `https://ycom.live/announcer/${announcer._id}` },
+            ])
+          ),
+        }}
+      />
       <div className="max-w-4xl mx-auto px-6">
         {/* Breadcrumb */}
         <div className="mb-8">
