@@ -37,11 +37,11 @@ export function Hero() {
               프로젝트 문의하기
             </button>
             <a
-              href="tel:01076526842"
+              href="tel:01022826486"
               className="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border border-slate-200 font-bold rounded-xl hover:bg-slate-50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 shadow-sm"
             >
               <Phone className="w-5 h-5 text-sky-600" />
-              010-7652-6842
+              010 2282 6486
             </a>
             <Link
               href="#services"

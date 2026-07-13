@@ -21,14 +21,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
           {/* Phone Card */}
           <a
-            href="tel:01076526842"
+            href="tel:01022826486"
             className="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-sky-500 transition-colors block group"
           >
             <div className="w-8 h-8 text-sky-400 mx-auto mb-4 group-hover:scale-110 transition-transform">
               📞
             </div>
             <h3 className="text-lg font-bold mb-1">Phone</h3>
-            <p className="text-slate-300 mb-2">010-7652-6842</p>
+            <p className="text-slate-300 mb-2">010 2282 6486</p>
           </a>
 
           {/* Email Card (Triggers Modal) */}
