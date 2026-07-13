@@ -63,7 +63,7 @@ export function Hero() {
               </button>
 
               <a
-                href="tel:01076526842"
+                href="tel:01022826486"
                 className="px-8 lg:px-10 py-4 text-sm lg:text-base font-bold uppercase tracking-wider border-2 transition-all duration-300 flex items-center justify-center gap-2"
                 style={{
                   borderColor: 'var(--color-business-secondary)',
@@ -80,7 +80,7 @@ export function Hero() {
                 }}
               >
                 <Phone className="w-5 h-5" />
-                010-7652-6842
+                010 2282 6486
               </a>
             </div>
           </div>

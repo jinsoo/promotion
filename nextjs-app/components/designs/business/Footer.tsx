@@ -25,11 +25,11 @@ export function Footer() {
             </div>
             <div className="mt-8 lg:mt-0 flex flex-col sm:flex-row gap-4 lg:gap-6 w-full lg:w-auto">
                 <a 
-                    href="tel:01076526842"
+                    href="tel:01022826486"
                     className="group px-6 lg:px-8 py-4 bg-white/5 border border-white/10 hover:border-[var(--color-business-secondary)] transition-all duration-300"
                 >
                     <span className="block text-xs uppercase tracking-widest text-white/40 mb-1 group-hover:text-[var(--color-business-secondary)]">Call Us</span>
-                    <span className="text-base lg:text-lg font-bold">010-7652-6842</span>
+                    <span className="text-base lg:text-lg font-bold">010 2282 6486</span>
                 </a>
                 <button 
                     onClick={() => setIsContactModalOpen(true)}
