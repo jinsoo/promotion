@@ -33,7 +33,7 @@ export function Footer() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row justify-center gap-8 mb-12">
             <a
-              href="tel:01076526842"
+              href="tel:01022826486"
               className="px-8 py-4 font-bold uppercase tracking-wider border-2 transition-all duration-300"
               style={{
                 borderColor: 'var(--color-gold)',
@@ -48,7 +48,7 @@ export function Footer() {
                 e.currentTarget.style.color = 'var(--color-gold)';
               }}
             >
-              📞 010-7652-6842
+              📞 010 2282 6486
             </a>
             <button
               onClick={() => setIsContactModalOpen(true)}
